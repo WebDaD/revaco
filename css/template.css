@@ -1,6 +1,26 @@
 @CHARSET "ISO-8859-1";
 /*BASIC STYLING (articels, links, etc)*/
 
+/*Elements*/
+
+
+/*Content*/
+/*person*/ 
+div.person {width:44%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;-webkit-border-radius: 5px;border-radius: 5px;border:1px solid #C0C0C0;background-color:#F8F8FF}
+div.person h3{width:100%;margin:0 auto;margin-bottom:5px;display:block;border-bottom:1px solid #C0C0C0;background-color:#DCDCDC;-webkit-border-radius: 5px 5px 0 0;border-radius: 5px 5px 0 0;}/*name of ministry*/
+div.person img{width:90%;margin:0 auto;margin-bottom:5px;}
+div.person p{width:90%;margin:0 auto;margin-bottom:1px;display:block} /*multiple data like name, phone, email*/
+
+/*nav_link*/
+div.nav_link{width:44%;min-width:300px;float:left;margin: 2% 2% 2% 2%;}
+div.nav_link h3{border-bottom: 1px solid #C0C0C0;margin-bottom:4px;} /*Headline*/
+div.nav_link img{float:left;width:25%;margin: 0 2% 2% 2%;}
+div.nav_link p {float:left;width:70%;margin-top:0;margin-bottom:0;}/*intro*/
+div.nav_link a:after {content:" >>> ";}
+
+/*text*/
+
+/*gallery*/
 
 /*END BASIC STYLING*/
 
