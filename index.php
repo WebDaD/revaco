@@ -57,13 +57,21 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="header_mobile" class="mobile">
-				<!-- TODO: 3 stripes, logo_white, headline -->
-				<!-- TODO: hidden nav from left -->
+			<div id="header_mobile" class="mobile"> <!-- TODO: style -->
+				<img id="nav_button" src="img/nav_button.png"/>
+				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
+				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				
+				<div id="nav_mobile"> <!-- TODO: Hidden, on click comes from left, list of buttons -->
+					<jdoc:include type="modules" name="navigation" style="none" />
+				</div>
 			</div>
-			<div id="header_desktop" class="desktop">
-				<!-- TODO: Logo headline, second logo upper right -->
-				<!-- TODO: navigation -->
+			<div id="header_desktop" class="desktop"><!-- TODO: Style -->
+				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				<div id="nav_desktop"><!-- TODO: horizontal bar of level1, onHover display level2 -->
+					<jdoc:include type="modules" name="navigation" style="none" />
+				</div>
 			</div>
 			<div id="content">
 				<jdoc:include type="component" />

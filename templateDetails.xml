@@ -35,6 +35,12 @@
         <config>
 		<fields name="params">
 			<fieldset name="advanced">
+			    
+			    <field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+			    
 				<field name="main_color" class="" type="color" default="#08C"
 					label="TPL_REVACO_MAINCOLOR_LABEL"
 					description="TPL_REVACO_MAINCOLOR_DESC" />
@@ -47,10 +53,22 @@
 					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
 					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
 				
+				<field name="favicon" class="" type="media" default=""
+					label="TPL_REVACO_FAVICON_LABEL"
+					description="TPL_REVACO_FAVICON_DESC" />
+				
+				<field name="logo-white" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_WHITE_LABEL"
+					description="TPL_REVACO_LOGO_WHITE_DESC" />
+				
+				<field name="logo-114" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_114_LABEL"
+					description="TPL_REVACO_LOGO_114_DESC" />
+				
 				<field name="logo-196" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_196_LABEL"
 					description="TPL_REVACO_LOGO_196_DESC" />
-				<!-- TODO: Add favicon -->	
+
 				<!-- TODO: Add logosizes -->
 				<!-- TODO: Add whiteonly Logo (for mobile) -->
 				
