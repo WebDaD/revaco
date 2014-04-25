@@ -5,11 +5,24 @@
 /*END BASIC STYLING*/
 
 /*DESKTOP Elements*/
+body{}
+#container{}
 
 /*hide mobile only elements, display desktop only elements*/
 .desktop{display:block;}
 .mobile{display:none;}
 
+/*HEADER*/
+#header_desktop{}
+#logo{}
+#headline{}
+/*NAVIGATION*/
+#nav_desktop{} /*TODO: horizontal bar of level1, onHover display level2 */
+
+/*CONTENT*/
+#content{}
+
+/*FOOTER*/
 /*On Desktop, social Links are just the buttons*/
 a.social{float:left;}
 img.social_icon{width:64px;}

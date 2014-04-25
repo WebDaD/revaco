@@ -1,11 +1,27 @@
 @CHARSET "UTF-8";
 /*OVERWRITING FOR MOBILE*/
 
+#container{}
 
 /*hide desktop only elements, display mobile only elements*/
 .desktop{display:none;}
 .mobile{display:block;}
 
+
+/*HEADER*/
+#header_mobile{}
+#nav_button{}
+#logo_white{}
+
+
+/*NAVIGATION*/
+#nav_mobile{} /*TODO: Hidden, on click comes from left, list of buttons*/
+
+
+/*CONTENT*/
+#content{}
+
+/*FOOTER*/
 /*On Mobile, we have full width elements*/
 a.social{float:left;width:100%;display:block;}
 img.social_icon{height:32px;}

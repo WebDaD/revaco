@@ -36,20 +36,20 @@
 		<fields name="params">
 			<fieldset name="advanced">
 			    
-			    <field name="sitetitle"  type="text" default=""
+			    <field name="sitetitle"  type="text" default="" required="true"
 					label="JGLOBAL_TITLE"
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					filter="string" />
 			    
-				<field name="main_color" class="" type="color" default="#08C"
+				<field name="main_color" class="" type="color" default="#990000"
 					label="TPL_REVACO_MAINCOLOR_LABEL"
 					description="TPL_REVACO_MAINCOLOR_DESC" />
 
-				<field name="assisting_color" class="" type="color" default="#F4F6F7"
+				<field name="assisting_color" class="" type="color" default="#FF9933"
 					label="TPL_REVACO_ASSISTING_COLOR_LABEL"
 					description="TPL_REVACO_ASSISTING_COLOR_DESC" />
 
-				<field name="impressum_link" class="" type="text" default=""
+				<field name="impressum_link" class="" type="url" default="" required="true"
 					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
 					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
 				
@@ -61,16 +61,45 @@
 					label="TPL_REVACO_LOGO_WHITE_LABEL"
 					description="TPL_REVACO_LOGO_WHITE_DESC" />
 				
+				<field name="logo-57" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_57_LABEL"
+					description="TPL_REVACO_LOGO_57_DESC" />
+				
+				<field name="logo-72" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_72_LABEL"
+					description="TPL_REVACO_LOGO_72_DESC" />
+				
 				<field name="logo-114" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_114_LABEL"
 					description="TPL_REVACO_LOGO_114_DESC" />
+				
+				<field name="logo-144" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_144_LABEL"
+					description="TPL_REVACO_LOGO_144_DESC" />
 				
 				<field name="logo-196" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_196_LABEL"
 					description="TPL_REVACO_LOGO_196_DESC" />
 
-				<!-- TODO: Add logosizes -->
-				<!-- TODO: Add whiteonly Logo (for mobile) -->
+				<field name="startup-320" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_320_LABEL"
+					description="TPL_REVACO_STARTUP_320_DESC" />
+
+				<field name="startup-640" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_640_LABEL"
+					description="TPL_REVACO_STARTUP_640_DESC" />
+				
+				<field name="startup-1096" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_1096_LABEL"
+					description="TPL_REVACO_STARTUP_1096_DESC" />
+				
+				<field name="startup-768" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_768_LABEL"
+					description="TPL_REVACO_STARTUP_768_DESC" />
+				
+				<field name="startup-1024" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_1024_LABEL"
+					description="TPL_REVACO_STARTUP_1024_DESC" />
 				
 				<field name="facebook"
 					type="radio"
@@ -82,7 +111,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="facebook_link" class="" type="text" default=""
+				<field name="facebook_link" class="" type="url" default=""
 					label="TPL_REVACO_FACEBOOK_LINK_LABEL"
 					description="TPL_REVACO_FACEBOOK_LINK_DESC" />
 				
@@ -96,7 +125,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="googleplus_link" class="" type="text" default=""
+				<field name="googleplus_link" class="" type="url" default=""
 					label="TPL_REVACO_GOOGLEPLUS_LINK_LABEL"
 					description="TPL_REVACO_GOOGLEPLUS_LINK_DESC" />
 				
@@ -110,7 +139,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="twitter_link" class="" type="text" default=""
+				<field name="twitter_link" class="" type="url" default=""
 					label="TPL_REVACO_TWITTER_LINK_LABEL"
 					description="TPL_REVACO_TWITTER_LINK_DESC" />
 				
@@ -124,7 +153,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="rss_link" class="" type="text" default=""
+				<field name="rss_link" class="" type="url" default=""
 					label="TPL_REVACO_RSS_LINK_LABEL"
 					description="TPL_REVACO_RSS_LINK_DESC" />
 				
@@ -138,7 +167,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="podcast_link" class="" type="text" default=""
+				<field name="podcast_link" class="" type="url" default=""
 					label="TPL_REVACO_PODCAST_LINK_LABEL"
 					description="TPL_REVACO_PODCAST_LINK_DESC" />
 				
@@ -152,7 +181,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="youtube_link" class="" type="text" default=""
+				<field name="youtube_link" class="" type="url" default=""
 					label="TPL_REVACO_YOUTUBE_LINK_LABEL"
 					description="TPL_REVACO_YOUTUBE_LINK_DESC" />
 				
@@ -166,7 +195,7 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="foursquare_link" class="" type="text" default=""
+				<field name="foursquare_link" class="" type="url" default=""
 					label="TPL_REVACO_FOURSQUARE_LINK_LABEL"
 					description="TPL_REVACO_FOURSQUARE_LINK_DESC" />
 			</fieldset>
