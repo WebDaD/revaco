@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+/*OVERWRITING FOR MOBILE*/
+
+
+/*hide desktop only elements, display mobile only elements*/
+.desktop{display:none;}
+.mobile{display:block;}
+
+/*On Mobile, we have full width elements*/
+a.social{float:left;width:100%;display:block;}
+img.social_icon{height:32px;}
+p.social_text{} /*TODO: Center text*/
+
+/*Impressum is a block like a social element*/
+a#impressum{float:left;width:100%;display:block;text-align:center}

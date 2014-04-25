@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+/*BASIC STYLING (articels, links, etc)*/
+
+
+/*END BASIC STYLING*/
+
+/*DESKTOP Elements*/
+
+/*hide mobile only elements, display desktop only elements*/
+.desktop{display:block;}
+.mobile{display:none;}
+
+/*On Desktop, social Links are just the buttons*/
+a.social{float:left;}
+img.social_icon{width:64px;}
+p.social_text{display:none;}
+
+/*Impressum is just a simple Link with hovering*/
+a#impressum{}
+a#impressum:hover{}
+
+/*END DESKTOP*/
