@@ -9,22 +9,23 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [X] Basic Files
 - [X] templateDetails.xml
 - [X] en-GB language strings
-- [ ] Basic CSS
+- [X] Basic CSS
 - [X] Basic HTML structure
 - [X] default logos
 
 ### 2 (Beta) YYYY-MM-DD:
 - [ ] de-DE language strings
-- [ ] revaco logo
-- [ ] Social Media Icons
-- [ ] default colors
-- [ ] desktop design
-- [ ] variable navigation (js) (http://jsfiddle.net/kricore/KVH4F/light/)
-- [ ] desktop footer
-- [ ] mobile design
-- [ ] mobile footer
+- [ ] revaco logo (all sizes and white)
+- [ ] Social Media Icons (48x48)
+- [X] default colors
+- [X] desktop design
+- [X] variable navigation (js) (http://jsfiddle.net/kricore/KVH4F/light/)
+- [X] desktop footer
+- [X] mobile design
+- [X] mobile footer
 - [ ] templatepreview.png
 - [ ] templatethumbnail.png
+- [ ] Variable Colors
 
 ### 3 (Release) YYYY-MM-DD:
 - [ ] Clickheat Template

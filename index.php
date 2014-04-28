@@ -83,7 +83,6 @@
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
 		
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/mobile.css" />
 		
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
@@ -92,50 +91,44 @@
 		<style>
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			
-			a#impressum{color:<?php echo $this->params->get('main_color');?>;}
-			a#impressum:hover{}/*TODO: Text shadow*/
+			/*a#impressum{color:<?php echo $this->params->get('main_color');?>;}*/
+
 			
 			/*MOBILE OVERWRITES*/
 			@media only screen and (max-device-width: 480px) {
 			
-				div#header_mobile{background-color:<?php echo $this->params->get('main_color');?>;color:white;}
-			
-				a.social{background-color:<?php echo $this->params->get('main_color');?>;}
-				
-				a#impressum{background-color:<?php echo $this->params->get('main_color');?>; border-top:1px solid #CDCDCD;color:#CDCDCD;}
-				a#impressum:hover{background-color:<?php echo $this->params->get('assisting_color');?>;}
+				/*a#impressum:hover{background-color:<?php echo $this->params->get('assisting_color');?>;}*/
 			}
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<div id="header_mobile" class="mobile">
-				<img id="nav_button" src="img/nav_button.png"/>
+			 <a href="#" id="menuToggler">
+		        <span class="icon icon-menu">&#9776;</span>
+		    </a>
 				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
-			</div>
-			<div id="nav_mobile" class="mobile"> 
-				<jdoc:include type="modules" name="navigation" style="none" />
 			</div>
 			<div id="header_desktop" class="desktop">
 				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
-				<div id="nav_desktop">
-					<jdoc:include type="modules" name="navigation" style="none" />
-				</div>
 			</div>
+			<nav id="navigation"> 
+				<jdoc:include type="modules" name="navigation" style="none" />
+			</nav>
 			<div id="content">
 				<jdoc:include type="component" />
 			</div>
 			<div id="footer">
 				<div id="footer_left">
-					<?php if($this->params->get('facebook')=="1"):?><a class="social" href="<?php echo $this->params->get('facebook_link');?>"><img class="social_icon" src="img/facebook.png" alt="Facebook" title="<?php echo $this->params->get('facebook_link');?>"/><p class="social_text">Facebook</p></a><?php endif;?>
-					<?php if($this->params->get('googleplus')=="1"):?><a class="social" href="<?php echo $this->params->get('googleplus_link');?>"><img class="social_icon" src="img/googleplus.png" alt="Google+" title="<?php echo $this->params->get('googleplus_link');?>"/><p class="social_text">Google+</p></a><?php endif;?>
-					<?php if($this->params->get('twitter')=="1"):?><a class="social" href="<?php echo $this->params->get('twitter_link');?>"><img class="social_icon" src="img/twitter.png" alt="Twitter" title="<?php echo $this->params->get('twitter_link');?>"/><p class="social_text">Twitter</p></a><?php endif;?>
-					<?php if($this->params->get('rss')=="1"):?><a class="social" href="<?php echo $this->params->get('rss_link');?>"><img class="social_icon" src="img/rss.png" alt="RSS" title="<?php echo $this->params->get('rss_link');?>"/><p class="social_text">RSS</p></a><?php endif;?>
-					<?php if($this->params->get('podcast')=="1"):?><a class="social" href="<?php echo $this->params->get('podcast_link');?>"><img class="social_icon" src="img/podcast.png" alt="Podcast" title="<?php echo $this->params->get('podcast_link');?>"/><p class="social_text">Podcast</p></a><?php endif;?>
-					<?php if($this->params->get('youtube')=="1"):?><a class="social" href="<?php echo $this->params->get('youtube_link');?>"><img class="social_icon" src="img/youtube.png" alt="YouTube" title="<?php echo $this->params->get('youtube_link');?>"/><p class="social_text">YouTube</p></a><?php endif;?>
-					<?php if($this->params->get('foursquare')=="1"):?><a class="social" href="<?php echo $this->params->get('foursquare_link');?>"><img class="social_icon" src="img/foursquare.png" alt="FourSquare" title="<?php echo $this->params->get('foursquare_link');?>"/><p class="social_text">FourSquare</p></a><?php endif;?>
+					<?php if($this->params->get('facebook')=="1"):?><a class="social" href="<?php echo $this->params->get('facebook_link');?>"><img class="social_icon" src="img/facebook.png" alt="Facebook" title="<?php echo $this->params->get('facebook_link');?>"/><span class="social_text">Facebook</span></a><?php endif;?>
+					<?php if($this->params->get('googleplus')=="1"):?><a class="social" href="<?php echo $this->params->get('googleplus_link');?>"><img class="social_icon" src="img/googleplus.png" alt="Google+" title="<?php echo $this->params->get('googleplus_link');?>"/><span class="social_text">Google+</span></a><?php endif;?>
+					<?php if($this->params->get('twitter')=="1"):?><a class="social" href="<?php echo $this->params->get('twitter_link');?>"><img class="social_icon" src="img/twitter.png" alt="Twitter" title="<?php echo $this->params->get('twitter_link');?>"/><span class="social_text">Twitter</span></a><?php endif;?>
+					<?php if($this->params->get('rss')=="1"):?><a class="social" href="<?php echo $this->params->get('rss_link');?>"><img class="social_icon" src="img/rss.png" alt="RSS" title="<?php echo $this->params->get('rss_link');?>"/><span class="social_text">RSS</span></a><?php endif;?>
+					<?php if($this->params->get('podcast')=="1"):?><a class="social" href="<?php echo $this->params->get('podcast_link');?>"><img class="social_icon" src="img/podcast.png" alt="Podcast" title="<?php echo $this->params->get('podcast_link');?>"/><span class="social_text">Podcast</span></a><?php endif;?>
+					<?php if($this->params->get('youtube')=="1"):?><a class="social" href="<?php echo $this->params->get('youtube_link');?>"><img class="social_icon" src="img/youtube.png" alt="YouTube" title="<?php echo $this->params->get('youtube_link');?>"/><span class="social_text">YouTube</span></a><?php endif;?>
+					<?php if($this->params->get('foursquare')=="1"):?><a class="social" href="<?php echo $this->params->get('foursquare_link');?>"><img class="social_icon" src="img/foursquare.png" alt="FourSquare" title="<?php echo $this->params->get('foursquare_link');?>"/><span class="social_text">FourSquare</span></a><?php endif;?>
 				</div>
 				<div id="footer_right">
 					<a id="impressum" href="<?php echo $this->params->get('impressum_link');?>">Impressum</a>
