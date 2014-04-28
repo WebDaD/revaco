@@ -45,6 +45,10 @@
 					label="TPL_REVACO_MAINCOLOR_LABEL"
 					description="TPL_REVACO_MAINCOLOR_DESC" />
 
+				<field name="comp_color" class="" type="color" default="#FFFFFF"
+					label="TPL_REVACO_COMPCOLOR_LABEL"
+					description="TPL_REVACO_COMPCOLOR_DESC" />
+					
 				<field name="assisting_color" class="" type="color" default="#FF9933"
 					label="TPL_REVACO_ASSISTING_COLOR_LABEL"
 					description="TPL_REVACO_ASSISTING_COLOR_DESC" />

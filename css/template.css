@@ -63,12 +63,12 @@ div.divider h3 {text-align:center;}
 /*HEADER*/
 #header_desktop{width:100%;height:114px;}
 #logo{float:left;width:114px;}
-#headline{float:left;color:#990000;font-size:36pt;height:114px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:114px;vertical-align:middle;}
+#headline{float:left;font-size:36pt;height:114px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:114px;vertical-align:middle;}
 
 /*NAVIGATION*/
 #navigation{clear:both;margin-bottom:2%;}
 ul { list-style: none outside none;  }
-ul.menu { background-color: #990000; margin: 0; padding: 0; font-size: 0.9em; color:white;text-decoration:none;     }
+ul.menu {margin: 0; padding: 0; font-size: 0.9em;text-decoration:none; }
 ul.menu ul { left: -9999em; opacity: 0; position: absolute; width: 300px; background: #e6e6e6; margin: 0; padding: 0; top: 40px;
 				/* the transitions */
          -webkit-transition: opacity 300ms ease-in-out, top 200ms ease-in-out;
@@ -77,38 +77,26 @@ ul.menu ul { left: -9999em; opacity: 0; position: absolute; width: 300px; backgr
 	}
 ul.menu ul ul { background: #cccccc; }
 ul.menu > li { display: inline-block; vertical-align: middle; position: relative; /* top level links only in order to avoid overriding */ }
-ul.menu > li > a { display: inline-block; vertical-align: middle; padding: 8px 10px; color:white;text-decoration:none;}
-ul.menu > li > a:hover,
-ul.menu > li:hover > a { background: white; color:#990000;}
+ul.menu > li > a { display: inline-block; vertical-align: middle; padding: 8px 10px; text-decoration:none;}
+
 /* setting the visibility */
 ul.menu > li:hover > ul { opacity: 1; top: 30px; left: 0; }
 ul.menu > li > ul > li:hover ul { opacity: 1; top: 36px; left: 300px; }
 
 /* second and third level */
-ul.menu ul > li { display: block; display-display: block; display-padding: 10px 15px; background-color:#990000;}
-ul.menu ul > li a { display: block; padding: 10px 15px;color:white;text-decoration:none; }
-ul.menu ul > li a:hover,
-ul.menu ul > li:hover a { background: white;color:#990000; }
-ul.menu ul ul li a:hover { background: white;color:#990000; }
-ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border:1px solid #990000;}
-ul.menu li.parent.deeper  ul  li.parent.deeper  ul li  a:hover{ background: #990000;color:white; }
+ul.menu ul > li { display: block; display-display: block; display-padding: 10px 15px;}
+ul.menu ul > li a { display: block; padding: 10px 15px;text-decoration:none; }
+ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-style:solid;border-width:1px;}
 
-/* Active and parent classes- using Joomla! menu classes - use the :after pseudo-classes to add images or icon fonts. You can safely remove this part since it's completely optional - remove at will */
-/* active states */
-ul.menu > li.parent > a { background: white;color:#990000; }
-ul.menu > li.active { background: white;color:#990000; }
-	/* lower levels */
-	ul.menu > li.active > a { }
-	ul.menu > li.active > ul > li.active > a { }
-	ul.menu > li.active > ul > li.active > ul > li.active > a { }
+
 
 
 
 /*CONTENT*/
-#content{clear:both;border-left:6px solid orange;padding-left:2%;}
+#content{clear:both;border-left-width:6px;border-left-style:solid;padding-left:2%;}
 
 /*FOOTER*/
-#footer{border-top:4px solid #990000;margin-top:2%;}
+#footer{border-top-width:4px;border-top-style:solid;margin-top:2%;}
 
 /*On Desktop, social Links are just the buttons*/
 a.social{float:left;margin-top:2%;margin-right:2%;}
@@ -125,12 +113,12 @@ transition: all 250ms ease-in-out;}
 span.social_text{display:none;}
 
 /*Impressum is just a simple Link with hovering*/
-a#impressum{text-decoration:none;float:right;color:#990000;font-weight:bold;-webkit-transition: all 250ms ease-in-out;
+a#impressum{text-decoration:none;float:right;font-weight:bold;-webkit-transition: all 250ms ease-in-out;
 -moz-transition: all 250ms ease-in-out;
 -ms-transition: all 250ms ease-in-out;
 -o-transition: all 250ms ease-in-out;
 transition: all 250ms ease-in-out;}
-a#impressum:hover{font-size:1.2em;text-shadow: 0 0 5px #CDCDCD;-webkit-transition: all 250ms ease-in-out;
+a#impressum:hover{font-size:1.2em;-webkit-transition: all 250ms ease-in-out;
 -moz-transition: all 250ms ease-in-out;
 -ms-transition: all 250ms ease-in-out;
 -o-transition: all 250ms ease-in-out;
@@ -149,10 +137,14 @@ transition: all 250ms ease-in-out;}/*TODO: Text shadow*/
 
 
 /*HEADER*/
-#header_mobile{height:48px;background-color:#990000;color:white;}
-#menuToggler{float:left;color:white;font-size:20pt;}
+#header_mobile{height:48px;}
+#menuToggler{float:left;font-size:20pt;}
+#menuToggler .icon { display: inline-block; vertical-align: middle; padding-right: 5px; }
+#menuToggler span { display: inline-block; vertical-align: middle; font-weight: 800; font-size: 24px; line-height: 48px; }
+#menuToggler a:hover { text-decoration: none; }
+	
 #logo_white{float:left;height:48px;}
-#headline {height:48px;color:white;font-size:20pt;line-height:48px;vertical-align:middle; }
+#headline {height:48px;font-size:20pt;line-height:48px;vertical-align:middle; }
 
 /*NAVIGATION*/
 
@@ -177,17 +169,11 @@ ul.menu { left: -300px; width: 300px; z-index: 10009; line-height: 1.8; position
 
   /* globally reset all paddings */
   ul.menu a { padding: 12px 20px !important; }
-  ul.menu li:hover a{color:#990000;background-color:white;}
-  ul.menu li:hover ul{background-color:#990000;color:white;}
-    ul.menu li:hover ul li:hover a{background-color:#990000;color:white;}
-    ul.menu li:hover ul li:hover ul li:hover a{color:#990000;background-color:white;}
+
   /* support for browsers which do not support 3D transforms - must use Modernizr for this feature */
 	.no-csstransforms3d ul.menu.menuIsActive { left: 0; } 
   
-  /* the visibility toggler */
-	#menuToggler .icon { display: inline-block; vertical-align: middle; padding-right: 5px; }
-	#menuToggler span { display: inline-block; vertical-align: middle; font-weight: 800; font-size: 24px; line-height: 48px; }
-	#menuToggler a:hover { text-decoration: none; }
+
 
 
 /*CONTENT*/
@@ -197,19 +183,17 @@ ul.menu { left: -300px; width: 300px; z-index: 10009; line-height: 1.8; position
     #footer{margin:0;border:none;}
     
 /*On Mobile, we have full width elements*/
-a.social{float:left;width:100%;display:block;margin-top:0px;border-bottom:1px solid #CDCDCD;background-color:#990000;height:60px;text-align:center;}
-a.social:hover{background-color:#CDCDCD;color:#990000;}
+a.social{float:left;width:100%;display:block;margin-top:0px;border-bottom-width:1px;border-bottom-style:solid;height:60px;text-align:center;}
 img.social_icon{height:48px;width:48px;margin-top:6px;margin-bottom:6px;float:left;margin-right:6px;margin-left:12px;}
-span.social_text{display:block;color:white;font-size:24pt;line-height:48px;height:48px;float:left;vertical-align:middle;margin-top:6px;margin-bottom:6px;width:calc(100%);margin-left:-66px;} /*TODO: Center text*/
-    span.social_text:hover{color:#990000;}
+span.social_text{display:block;font-size:24pt;line-height:48px;height:48px;float:left;vertical-align:middle;margin-top:6px;margin-bottom:6px;width:calc(100%);margin-left:-66px;} 
     
 /*Impressum is a block like a social element*/
-a#impressum{font-weight:normal;float:left;width:100%;display:block;text-align:center;background-color:#990000;color:white;height:60px;font-size:24pt;text-decoration:none;line-height:60px;vertical-align:middle;-webkit-transition: none;
+a#impressum{font-weight:normal;float:left;width:100%;display:block;text-align:center;height:60px;font-size:24pt;text-decoration:none;line-height:60px;vertical-align:middle;-webkit-transition: none;
 -moz-transition: none;
 -ms-transition: none;
 -o-transition: none;
 transition: none;}
-a#impressum:hover{font-size:24pt;background-color:#CDCDCD;color:#990000;-webkit-transition: none;
+a#impressum:hover{font-size:24pt;-webkit-transition: none;
 -moz-transition: none;
 -ms-transition: none;
 -o-transition: none;

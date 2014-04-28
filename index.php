@@ -93,11 +93,45 @@
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}
 
+			#headline{color:<?php echo $this->params->get('main_color');?>;}
+			
+			ul.menu { background-color: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
+			ul.menu > li > a {color:<?php echo $this->params->get('comp_color');?>;}
+			ul.menu > li > a:hover, ul.menu > li:hover > a { background: <?php echo $this->params->get('comp_color');?>; color:<?php echo $this->params->get('main_color');?>;}
+			ul.menu ul > li { background-color:<?php echo $this->params->get('main_color');?>;}
+			ul.menu ul > li a {color:<?php echo $this->params->get('comp_color');?>;}
+			ul.menu ul > li a:hover,ul.menu ul > li:hover a { background: <?php echo $this->params->get('comp_color');?>;color:#990000; }
+			ul.menu ul ul li a:hover { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
+			ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-color:<?php echo $this->params->get('main_color');?>;}
+			ul.menu li.parent.deeper  ul  li.parent.deeper  ul li  a:hover{ background: <?php echo $this->params->get('main_color');?>;<?php echo $this->params->get('comp_color');?>; }
+			ul.menu > li.parent > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
+			ul.menu > li.active { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
+
+			#content{border-left-color:<?php echo $this->params->get('assisting_color');?>;}
+			
+			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;}
+			a#impressum{color:<?php echo $this->params->get('main_color');?>;}
+			a#impressum:hover{text-shadow: 0 0 5px <?php echo $this->params->get('assisting_color');?>;}
 			
 			/*MOBILE OVERWRITES*/
 			@media only screen and (max-width: 800px) {
 			
-				/*a#impressum:hover{background-color:<?php echo $this->params->get('assisting_color');?>;}*/
+				#header_mobile{background-color:<?php echo $this->params->get('main_color');?>;color: <?php echo $this->params->get('comp_color');?>;}
+				#menuToggler{color:<?php echo $this->params->get('comp_color');?>;}
+				#headline{color:<?php echo $this->params->get('comp_color');?>;}
+				
+				ul.menu li:hover a{color:<?php echo $this->params->get('main_color');?>;background-color:<?php echo $this->params->get('comp_color');?>;}
+  				ul.menu li:hover ul{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
+    			ul.menu li:hover ul li:hover a{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
+    			ul.menu li:hover ul li:hover ul li:hover a{color:<?php echo $this->params->get('main_color');?>;background-color:<?php echo $this->params->get('comp_color');?>;}
+				
+				a.social{border-bottom-color:<?php echo $this->params->get('comp_color');?>;background-color:<?php echo $this->params->get('main_color');?>;}
+				a.social:hover{background-color:<?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>;}
+				span.social_text{color:<?php echo $this->params->get('comp_color');?>;}
+				span.social_text:hover{color:<?php echo $this->params->get('main_color');?>;}
+				a#impressum{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
+				a#impressum:hover{background-color:<?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>;}
+				
 			}
 		</style>
 	</head>

@@ -25,7 +25,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [X] mobile footer
 - [ ] templatepreview.png
 - [ ] templatethumbnail.png
-- [ ] Variable Colors
+- [X] Variable Colors
 
 ### 3 (Release) YYYY-MM-DD:
 - [X] Clickheat Template
