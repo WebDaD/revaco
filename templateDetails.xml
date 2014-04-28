@@ -198,6 +198,43 @@
 				<field name="foursquare_link" class="" type="url" default=""
 					label="TPL_REVACO_FOURSQUARE_LINK_LABEL"
 					description="TPL_REVACO_FOURSQUARE_LINK_DESC" />
+					
+				<field name="clickheat"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_CLICKHEAT_LABEL"
+					description="TPL_REVACO_CLICKHEAT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="clickheat_server" class="" type="url" default=""
+					label="TPL_REVACO_CLICKHEAT_SERVER_LABEL"
+					description="TPL_REVACO_CLICKHEAT_SERVER_DESC" />
+				<field name="clickheat_site" class="" type="text" default=""
+					label="TPL_REVACO_CLICKHEAT_SITE_LABEL"
+					description="TPL_REVACO_CLICKHEAT_SITE_DESC" />
+				<field name="clickheat_group" class="" type="text" default=""
+					label="TPL_REVACO_CLICKHEAT_GROUP_LABEL"
+					description="TPL_REVACO_CLICKHEAT_GROUP_DESC" />
+					
+				<field name="analytics"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_ANALYTICS_LABEL"
+					description="TPL_REVACO_ANALYTICS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="analytics_id" class="" type="text" default=""
+					label="TPL_REVACO_ANALYTICS_ID_LABEL"
+					description="TPL_REVACO_ANALYTICS_ID_DESC" />
+				<field name="analytics_property" class="" type="text" default=""
+					label="TPL_REVACO_ANALYTICS_PROPERTY_LABEL"
+					description="TPL_REVACO_ANALYTICS_PROPERTY_DESC" />
 			</fieldset>
 		</fields>
 	</config>

@@ -90,12 +90,12 @@
 
 		<style>
 			/*Here are all Styles which use colors (Links, nav, etc)*/
-			
-			/*a#impressum{color:<?php echo $this->params->get('main_color');?>;}*/
+			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
+			div.news h3{color:<?php echo $this->params->get('main_color');?>;}
 
 			
 			/*MOBILE OVERWRITES*/
-			@media only screen and (max-device-width: 480px) {
+			@media only screen and (max-width: 800px) {
 			
 				/*a#impressum:hover{background-color:<?php echo $this->params->get('assisting_color');?>;}*/
 			}
@@ -135,5 +135,26 @@
 				</div>
 			</div>
 		</div>
+		<?php if($this->params->get('clickheat')=="1"):?>
+		<script type="text/javascript" src="http://<?php echo $this->params->get('clickheat_server');?>/js/clickheat.js"></script>
+		<script type="text/javascript">
+			<!--
+				clickHeatSite = '<?php echo $this->params->get('clickheat_site');?>';
+				clickHeatGroup = '<?php echo $this->params->get('clickheat_group');?>';
+				clickHeatServer = 'http://<?php echo $this->params->get('clickheat_server');?>/click.php';
+				initClickHeat(); 
+			//-->
+		</script>
+		<?php endif;?>
+		<?php if($this->params->get('analytics')=="1"):?>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			  ga('create', '<?php echo $this->params->get('analytics_id');?>', '<?php echo $this->params->get('analytics_property');?>');
+			  ga('send', 'pageview');
+			</script>
+		<?php endif;?>
 	</body>
 </html>

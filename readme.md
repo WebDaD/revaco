@@ -4,7 +4,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 
 ## MileStones
 
-### 1 (Alpha) YYYY-MM-DD:
+### 1 (Alpha) 2014-04-28:
 - [X] Basic Folders
 - [X] Basic Files
 - [X] templateDetails.xml
@@ -15,7 +15,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 
 ### 2 (Beta) YYYY-MM-DD:
 - [ ] de-DE language strings
-- [ ] revaco logo (all sizes and white)
+- [X] revaco logo (all sizes and white)
 - [ ] Social Media Icons (48x48)
 - [X] default colors
 - [X] desktop design
@@ -28,9 +28,9 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Variable Colors
 
 ### 3 (Release) YYYY-MM-DD:
-- [ ] Clickheat Template
-- [ ] gAnalytics Template
-- [ ] article template CSS
+- [X] Clickheat Template
+- [X] gAnalytics Template
+- [X] article template CSS
 - [ ] Usage Manual
 - [ ] More Social Links
 - [ ] Swipe out navigation
