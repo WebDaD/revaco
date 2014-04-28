@@ -26,12 +26,14 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] templatepreview.png
 - [ ] templatethumbnail.png
 - [X] Variable Colors
+- [ ] content headlines (h1?)
 
 ### 3 (Release) YYYY-MM-DD:
 - [X] Clickheat Template
 - [X] gAnalytics Template
 - [X] article template CSS
 - [ ] Usage Manual
+- [ ] Images LazyLoad
 - [ ] More Social Links
 - [ ] Swipe out navigation
 
