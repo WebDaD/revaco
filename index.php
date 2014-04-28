@@ -89,6 +89,8 @@
 		<script src="js/main.js"></script>
 
 		<style>
+			body{background:<?php echo $this->params->get('back_color');?>;}
+		
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}

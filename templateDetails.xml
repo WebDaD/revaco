@@ -53,6 +53,10 @@
 					label="TPL_REVACO_ASSISTING_COLOR_LABEL"
 					description="TPL_REVACO_ASSISTING_COLOR_DESC" />
 
+				<field name="back_color" class="" type="color" default="#FFEBCD"
+					label="TPL_REVACO_BACKCOLOR_LABEL"
+					description="TPL_REVACO_BACKCOLOR_DESC" />
+					
 				<field name="impressum_link" class="" type="url" default="" required="true"
 					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
 					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
