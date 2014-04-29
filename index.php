@@ -6,74 +6,67 @@
    <head>
    		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="<?php echo $this->params->get('sitetitle');?>">
+		
+		<?php if($this->params->get('logo-196x196')!=""){$l_196x196=JUri::root() . $this->params->get('logo-196');}else{$l_196x196="img/logo-196x196.png";}?>
+		<link rel="icon" sizes="196x196" href="<?php echo $l_196x196;?>">
+		
+		<?php if($this->params->get('logo-152x152')!=""){$l_152x152=JUri::root() . $this->params->get('logo-152x152');}else{$l_152x152="img/logo-152x152.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo $l_152x152;?>">
+		
+		<?php if($this->params->get('logo-144x144')!=""){$l_144x144=JUri::root() . $this->params->get('logo-144x144');}else{$l_144x144="img/logo-144x144.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $l_144x144;?>">
+		
+		<?php if($this->params->get('logo-120x120')!=""){$l_120x120=JUri::root() . $this->params->get('logo-120x120');}else{$l_120x120="img/logo-120x120.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo $l_120x120;?>">
+		
+		<?php if($this->params->get('logo-114x114')!=""){$l_114x114=JUri::root() . $this->params->get('logo-114x114');}else{$l_114x114="img/logo-114x114.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $l_114x114;?>">
+		
+		<?php if($this->params->get('logo-76x76')!=""){$l_76x76=JUri::root() . $this->params->get('logo-76x76');}else{$l_76x76="img/logo-76x76.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo $l_76x76;?>">
+		
+		<?php if($this->params->get('logo-72x72')!=""){$l_72x72=JUri::root() . $this->params->get('logo-72x72');}else{$l_72x72="img/logo-72x72.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $l_72x72;?>">
+		
+		<?php if($this->params->get('logo-60x60')!=""){$l_60x60=JUri::root() . $this->params->get('logo-60x60');}else{$l_60x60="img/logo-60x60.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="<?php echo $l_60x60;?>">
+		
+		<?php if($this->params->get('logo-57x57')!=""){$l_57x57=JUri::root() . $this->params->get('logo-57x57');}else{$l_57x57="img/logo-57x57.png";}?>
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo $l_57x57;?>">
+		
+		<?php if($this->params->get('favicon')!=""){$favicon=JUri::root() . $this->params->get('favicon');}else{$favicon="img/favicon.ico";}?>
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon;?>" />
 
-		
-		<?php if($this->params->get('logo-196')!=""):?>
-			<link rel="icon" sizes="196x196" href="<?php echo JUri::root() . $this->params->get('logo-196');?>">
-		<?php else: ?>
-			<link rel="icon" sizes="196x196" href="img/logo-196.png">
-		<?php endif;?>
-		
-		<?php if($this->params->get('logo-57')!=""):?>
-			<link rel="apple-touch-icon" sizes="57x57" href="<?php echo JUri::root() . $this->params->get('logo-57');?>" />
-		<?php else: ?>
-			<link rel="apple-touch-icon" sizes="57x57" href="img/logo-57.png" />
-		<?php endif;?>
-		
-		<?php if($this->params->get('logo-72')!=""):?>
-			<link rel="apple-touch-icon" sizes="72x72" href="<?php echo JUri::root() . $this->params->get('logo-72');?>" />
-		<?php else: ?>
-			<link rel="apple-touch-icon" sizes="72x72" href="img/logo-72.png" />
-		<?php endif;?>
-		
-		<?php if($this->params->get('logo-114')!=""):?>
-			<link rel="apple-touch-icon" sizes="114x114" href="<?php echo JUri::root() . $this->params->get('logo-114');?>" />
-		<?php else: ?>
-			<link rel="apple-touch-icon" sizes="114x114" href="img/logo-114.png" />
-		<?php endif;?>
-		
-		<?php if($this->params->get('logo-144')!=""):?>
-			<link rel="apple-touch-icon" sizes="144x144" href="<?php echo JUri::root() . $this->params->get('logo-144');?>" />
-		<?php else: ?>
-			<link rel="apple-touch-icon" sizes="144x144" href="img/logo-144.png" />
-		<?php endif;?>
-		
-		<?php if($this->params->get('favicon')!=""):?>
-			<link rel="shortcut icon" type="image/x-icon" href="<?php echo JUri::root() . $this->params->get('favicon');?>" />
-		<?php else: ?>
-			<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-		<?php endif;?>
+		<?php if($this->params->get('startup-1536x2008')!=""){$s_1536x2008=JUri::root() . $this->params->get('startup-1536x2008');}else{$s_1536x2008="img/startup-1536x2008.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_1536x2008;?>" 
+		media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">	
 			
-		<?php if($this->params->get('startup-320')!=""):?>
-			<link rel="apple-touch-startup-image" href="<?php echo JUri::root() . $this->params->get('startup-320');?>" media="screen and (max-device-width : 320px)"> <!-- iPhone 3GS, 2011 iPod Touch -->
-		<?php else: ?>
-			<link rel="apple-touch-startup-image" href="img/startup-320.png" media="screen and (max-device-width : 320px)"> <!-- iPhone 3GS, 2011 iPod Touch -->
-		<?php endif;?>
+		<?php if($this->params->get('startup-1496x2048')!=""){$s_1496x2048=JUri::root() . $this->params->get('startup-1496x2048');}else{$s_1496x2048="img/startup-1496x2048.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_1496x2048;?>" 
+		media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+			
+		<?php if($this->params->get('startup-768x1004')!=""){$s_768x1004=JUri::root() . $this->params->get('startup-768x1004');}else{$s_768x1004="img/startup-768x1004.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_768x1004;?>" 
+		media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
+			
+		<?php if($this->params->get('startup-748x1024')!=""){$s_748x1024=JUri::root() . $this->params->get('startup-748x1024');}else{$s_748x1024="img/startup-748x1024.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_748x1024;?>" 
+		media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
 		
-		<?php if($this->params->get('startup-640')!=""):?>
-			<link rel="apple-touch-startup-image" href="<?php echo JUri::root() . $this->params->get('startup-640');?>" media="(max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 2)"><!-- iPhone 4, 4S and 2011 iPod Touch -->
-		<?php else: ?>
-			<link rel="apple-touch-startup-image" href="img/startup-640.png" media="(max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 2)"><!-- iPhone 4, 4S and 2011 iPod Touch -->
-		<?php endif;?>
+		<?php if($this->params->get('startup-640x1096')!=""){$s_640x1096=JUri::root() . $this->params->get('startup-640x1096');}else{$s_640x1096="img/startup-640x1096.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_640x1096;?>" 
+		media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
 		
-		<?php if($this->params->get('startup-1096')!=""):?>
-			<link rel="apple-touch-startup-image" href="<?php echo JUri::root() . $this->params->get('startup-1096');?>" media="(max-device-width : 548px) and (-webkit-min-device-pixel-ratio : 2)"><!-- iPhone 5 and 2012 iPod Touch -->
-		<?php else: ?>
-			<link rel="apple-touch-startup-image" href="img/startup-1096.png" media="(max-device-width : 548px) and (-webkit-min-device-pixel-ratio : 2)"><!-- iPhone 5 and 2012 iPod Touch -->
-		<?php endif;?>
+		<?php if($this->params->get('startup-640x920')!=""){$s_640x920=JUri::root() . $this->params->get('startup-320x460');}else{$s_640x920="img/startup-640x920.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_640x920;?>" 
+		media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
 		
-		<?php if($this->params->get('startup-1024')!=""):?>
-			<link rel="apple-touch-startup-image" sizes="1024x748" href="<?php echo JUri::root() . $this->params->get('startup-1024');?>" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)"><!-- iPad landscape -->
-		<?php else: ?>
-			<link rel="apple-touch-startup-image" sizes="1024x748" href="img/startup-1024.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)"><!-- iPad landscape -->
-		<?php endif;?>
+		<?php if($this->params->get('startup-320x460')!=""){$s_320x460=JUri::root() . $this->params->get('startup-320x460');}else{$s_320x460="img/startup-320x460.png";}?>
+		<link rel="apple-touch-startup-image" href="<?php echo $s_320x460;?>" 
+		media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
 		
-		<?php if($this->params->get('startup-768')!=""):?>
-			<link rel="apple-touch-startup-image" sizes="768x1004" href=""<?php echo JUri::root() . $this->params->get('startup-768');?>" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)"><!-- iPad Portrait -->
-		<?php else: ?>
-			<link rel="apple-touch-startup-image" sizes="768x1004" href="img/startup-768.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)"><!-- iPad Portrait -->
-		<?php endif;?>
 		
 		<meta name="viewport" content="width=device-width">
    
@@ -91,6 +84,8 @@
 		<style>
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
+			h1,h2,h3{color:<?php echo $this->params->get('main_color');?>;}
+			
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}

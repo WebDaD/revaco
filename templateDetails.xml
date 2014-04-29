@@ -69,46 +69,70 @@
 					label="TPL_REVACO_LOGO_WHITE_LABEL"
 					description="TPL_REVACO_LOGO_WHITE_DESC" />
 				
-				<field name="logo-57" class="" type="media" default=""
-					label="TPL_REVACO_LOGO_57_LABEL"
-					description="TPL_REVACO_LOGO_57_DESC" />
+				<field name="logo-196x196" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_196x196_LABEL"
+					description="TPL_REVACO_LOGO_196x196_DESC" />
 				
-				<field name="logo-72" class="" type="media" default=""
-					label="TPL_REVACO_LOGO_72_LABEL"
-					description="TPL_REVACO_LOGO_72_DESC" />
+				<field name="logo-152x152" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_152x152_LABEL"
+					description="TPL_REVACO_LOGO_152x152_DESC" />
+					
+				<field name="logo-144x144" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_144x144_LABEL"
+					description="TPL_REVACO_LOGO_144x144_DESC" />
+					
+				<field name="logo-120x120" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_120x120_LABEL"
+					description="TPL_REVACO_LOGO_120x120_DESC" />
+					
+				<field name="logo-114x114" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_114x114_LABEL"
+					description="TPL_REVACO_LOGO_114x114_DESC" />
 				
-				<field name="logo-114" class="" type="media" default=""
-					label="TPL_REVACO_LOGO_114_LABEL"
-					description="TPL_REVACO_LOGO_114_DESC" />
-				
-				<field name="logo-144" class="" type="media" default=""
-					label="TPL_REVACO_LOGO_144_LABEL"
-					description="TPL_REVACO_LOGO_144_DESC" />
-				
-				<field name="logo-196" class="" type="media" default=""
-					label="TPL_REVACO_LOGO_196_LABEL"
-					description="TPL_REVACO_LOGO_196_DESC" />
+				<field name="logo-76x76" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_76x76_LABEL"
+					description="TPL_REVACO_LOGO_76x76_DESC" />
+					
+				<field name="logo-72x72" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_72x72_LABEL"
+					description="TPL_REVACO_LOGO_72x72_DESC" />
 
-				<field name="startup-320" class="" type="media" default=""
-					label="TPL_REVACO_STARTUP_320_LABEL"
-					description="TPL_REVACO_STARTUP_320_DESC" />
+				<field name="logo-60x60" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_60x60_LABEL"
+					description="TPL_REVACO_LOGO_60x60_DESC" />
+					
+				<field name="logo-57x57" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_57x57_LABEL"
+					description="TPL_REVACO_LOGO_57x57_DESC" />
 
-				<field name="startup-640" class="" type="media" default=""
-					label="TPL_REVACO_STARTUP_640_LABEL"
-					description="TPL_REVACO_STARTUP_640_DESC" />
+				<field name="startup-1536x2008" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_1536x2008_LABEL"
+					description="TPL_REVACO_STARTUP_1536x2008_DESC" />
+
+				<field name="startup-1496x2048" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_1496x2048_LABEL"
+					description="TPL_REVACO_STARTUP_1496x2048_DESC" />
 				
-				<field name="startup-1096" class="" type="media" default=""
-					label="TPL_REVACO_STARTUP_1096_LABEL"
-					description="TPL_REVACO_STARTUP_1096_DESC" />
+				<field name="startup-768x1004" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_768x1004_LABEL"
+					description="TPL_REVACO_STARTUP_768x1004_DESC" />
 				
-				<field name="startup-768" class="" type="media" default=""
-					label="TPL_REVACO_STARTUP_768_LABEL"
-					description="TPL_REVACO_STARTUP_768_DESC" />
+				<field name="startup-748x1024" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_748x1024_LABEL"
+					description="TPL_REVACO_STARTUP_748x1024_DESC" />
 				
-				<field name="startup-1024" class="" type="media" default=""
-					label="TPL_REVACO_STARTUP_1024_LABEL"
-					description="TPL_REVACO_STARTUP_1024_DESC" />
+				<field name="startup-640x1096" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_640x1096_LABEL"
+					description="TPL_REVACO_STARTUP_640x1096_DESC" />
 				
+				<field name="startup-640x920" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_640x920_LABEL"
+					description="TPL_REVACO_STARTUP_640x920_DESC" />
+					
+				<field name="startup-320x460" class="" type="media" default=""
+					label="TPL_REVACO_STARTUP_320x460_LABEL"
+					description="TPL_REVACO_STARTUP_320x460_DESC" />
+					
 				<field name="facebook"
 					type="radio"
 					class="btn-group btn-group-yesno"
