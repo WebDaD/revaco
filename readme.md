@@ -29,11 +29,11 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [X] Clickheat Template
 - [X] gAnalytics Template
 - [X] article template CSS
-- [ ] Images LazyLoad http://luis-almeida.github.io/unveil/ (on doc.ready replace in all images: src with placeholder and set data-src to src)
+- [ ] optional Images LazyLoad http://luis-almeida.github.io/unveil/ (on doc.ready replace in all images: src with placeholder and set data-src to src)
 - [ ] More Social Links (search pics)
 - [ ] error.php http://www.12punkt.ch/joomla-3-x/templates/item/507-errorphp-datei-erstellen.html
 - [ ] component.php http://www.12punkt.ch/joomla/templates/item/434-componentphp-datei-erstellen.html
-- [ ] Swipe out navigation http://labs.rampinteractive.co.uk/touchSwipe/demos/
+- [ ] optional Swipe out navigation http://labs.rampinteractive.co.uk/touchSwipe/demos/
 - [ ] Info Button (bottom,right -> has powered by on hover)
 - [ ] Optional Search position (right in navbar(desktop) or button(mobile))
 - [ ] Optional Text Sizing http://plugins.jquery.com/textresizer/
@@ -41,6 +41,9 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Optional upper right 2nd Image (Desktop only) (yesno,path)
 - [ ] template_preview.png (600x400)
 - [ ] template_thumbnail.png (200x150)
-- [ ] AppCache (show definable offline message (offline.php instead of index.php)) http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache
-- [ ] Manual for Template (inluding links for favicon generator, script-fu-icons) html into description)
+- [ ] optional AppCache (show definable offline message (offline.php instead of index.php)) http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache
+- [ ] Manual for Template (inluding links for favicon generator, script-fu-icons, usage of articles(templates for tinymce), etc) html into description)
+- [ ] Features in Description
+- [ ] Folder "res" with eg scm-skript
+- [ ] *.zip into Repo
 
