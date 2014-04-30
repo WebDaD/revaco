@@ -44,12 +44,12 @@ div.nav_link a:after {content:" >>> ";}
 text
 = Default Text, mixed with images. just place them, they will float automaticelly. also there are dividers, headlines and divider-headlines
 */
-div.block{width:46%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
-div.block h3 {}
-div.block p {text-align:left;}
-div.block img{width:100%;display:inline;}
-div.divider{width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;}
-div.divider h3 {text-align:center;}
+h3.block {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
+p.block {width:46%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:left;}
+img.block{width:46%;min-width:300px;max-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;display:inline;}
+
+p.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;}
+h3.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
 
 
 /*END BASIC STYLING*/

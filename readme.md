@@ -35,8 +35,8 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] component.php http://www.12punkt.ch/joomla/templates/item/434-componentphp-datei-erstellen.html
 - [ ] optional Swipe out navigation http://labs.rampinteractive.co.uk/touchSwipe/demos/
 - [ ] Info Button (bottom,right -> has powered by on hover)
-- [ ] Optional Search position (right in navbar(desktop) or button(mobile))
-- [ ] Optional Text Sizing http://plugins.jquery.com/textresizer/
+- [ ] Search position (right in navbar(desktop) or button(mobile))
+- [ ] Optional Text Sizing http://plugins.jquery.com/textresizer/ (desktop only)
 - [ ] Translation Flags position (top right, flow down)
 - [ ] Optional upper right 2nd Image (Desktop only) (yesno,path)
 - [ ] template_preview.png (600x400)
@@ -46,4 +46,5 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Features in Description
 - [ ] Folder "res" with eg scm-skript
 - [ ] *.zip into Repo
+- [ ] BugFixing http://jsfiddle.net/DSigmund/ExGU3/4/
 

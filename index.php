@@ -150,6 +150,7 @@
 			</nav>
 			<div id="content">
 				<jdoc:include type="component" />
+				<div style="clear:both;"/></div>
 			</div>
 			<div id="footer">
 				<div id="footer_left">
