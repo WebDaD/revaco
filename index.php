@@ -142,7 +142,7 @@
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
 			</div>
 			<div id="header_desktop" class="desktop">
-				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
 			</div>
 			<nav id="navigation"> 
