@@ -36,6 +36,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Info Button (bottom,right -> has powered by on hover)
 - [ ] Search position (right in navbar(desktop) or button(mobile))
 - [ ] Optional Text Sizing http://plugins.jquery.com/textresizer/ (desktop only)
+- [ ] Social Media Yelp
 - [ ] Translation Flags position (top right, flow down)
 - [ ] Optional upper right 2nd Image (Desktop only) (yesno,path)
 - [ ] template_preview.png (600x400)
