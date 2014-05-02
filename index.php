@@ -80,11 +80,23 @@
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 		<script src="js/main.js"></script>
+		
+		<?php if($this->params->get('swipe')=="1"):?>
+			<script src="js/jquery.touchSwipe.min.js"></script>
+			<script src="js/swipe.js"></script>
+		<?php endif;?>
+		
+		<?php if($this->params->get('lazyload')=="1"):?>
+			<script src="js/jquery.unveil.min.js"></script>
+			<script src="js/lazy.js"></script>
+		<?php endif;?>
 
 		<style>
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
 			h1,h2,h3{color:<?php echo $this->params->get('main_color');?>;}
+			
+			#header_desktop{background:<?php echo $this->params->get('header_backcolor');?>;}:
 			
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
@@ -128,6 +140,10 @@
 				span.social_text:hover{color:<?php echo $this->params->get('main_color');?>;}
 				a#impressum{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
 				a#impressum:hover{background-color:<?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>;}
+				
+				<?php if($this->params->get('show_sm_icons')=="0"):?>
+					a.social img.social_icon{display:none;}
+				<?php endif;?>
 				
 			}
 		</style>

@@ -25,6 +25,8 @@
                 <position>navigation</position>
                 <position>news</position>
                 <position>impressum</position>
+                <position>search</position>
+                <position>flags</position>
         </positions>
         <languages folder="language">
             <language tag="de-DE">de-DE/de-DE.tpl_revaco.ini</language>
@@ -34,13 +36,25 @@
 		</languages>
         <config>
 		<fields name="params">
-			<fieldset name="advanced">
-			    
-			    <field name="sitetitle"  type="text" default="" required="true"
+			<fieldset name="basic">
+			 	<field name="sitetitle"  type="text" default="" required="true"
 					label="JGLOBAL_TITLE"
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					filter="string" />
-			    
+					
+			    <field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="impressum_link" class="" type="url" default="" required="true"
+					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
+					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
+					
+			
+			</fieldset>
+		
+			<fieldset name="colors">
 				<field name="main_color" class="" type="color" default="#990000"
 					label="TPL_REVACO_MAINCOLOR_LABEL"
 					description="TPL_REVACO_MAINCOLOR_DESC" />
@@ -57,10 +71,54 @@
 					label="TPL_REVACO_BACKCOLOR_LABEL"
 					description="TPL_REVACO_BACKCOLOR_DESC" />
 					
-				<field name="impressum_link" class="" type="url" default="" required="true"
-					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
-					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
+				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
+					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
+					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
+			</fieldset>
+		
+			<fieldset name="header">
+			
+			</fieldset>
+		
+			<fieldset name="style">
+			
+			</fieldset>
+			
+			<fieldset name="mobile">
+				<field name="swipe"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_SWIPE_LABEL"
+					description="TPL_REVACO_SWIPE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			
+				<field name="lazyload"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_LAYLOAD_LABEL"
+					description="TPL_REVACO_LAZYLOAD_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				
+				<field name="show_sm_icons"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_SHOW_SM_ICONS_LABEL"
+					description="TPL_REVACO_SHOW_SM_ICONS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="icons">
 				<field name="favicon" class="" type="media" default=""
 					label="TPL_REVACO_FAVICON_LABEL"
 					description="TPL_REVACO_FAVICON_DESC" />
@@ -132,7 +190,8 @@
 				<field name="startup-320x460" class="" type="media" default=""
 					label="TPL_REVACO_STARTUP_320x460_LABEL"
 					description="TPL_REVACO_STARTUP_320x460_DESC" />
-					
+			</fieldset>
+			<fieldset name="social_media">
 				<field name="facebook"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -231,6 +290,8 @@
 					label="TPL_REVACO_FOURSQUARE_LINK_LABEL"
 					description="TPL_REVACO_FOURSQUARE_LINK_DESC" />
 					
+			</fieldset>
+			<fieldset name="analytics">
 				<field name="clickheat"
 					type="radio"
 					class="btn-group btn-group-yesno"

@@ -29,11 +29,10 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [X] Clickheat Template
 - [X] gAnalytics Template
 - [X] article template CSS
-- [ ] optional Images LazyLoad http://luis-almeida.github.io/unveil/ (on doc.ready replace in all images: src with placeholder and set data-src to src)
+- [X] optional Images LazyLoad 
 - [ ] More Social Links (search pics)
-- [ ] error.php http://www.12punkt.ch/joomla-3-x/templates/item/507-errorphp-datei-erstellen.html
 - [ ] component.php http://www.12punkt.ch/joomla/templates/item/434-componentphp-datei-erstellen.html
-- [ ] optional Swipe out navigation http://labs.rampinteractive.co.uk/touchSwipe/demos/
+- [X] optional Swipe out navigation 
 - [ ] Info Button (bottom,right -> has powered by on hover)
 - [ ] Search position (right in navbar(desktop) or button(mobile))
 - [ ] Optional Text Sizing http://plugins.jquery.com/textresizer/ (desktop only)
@@ -43,8 +42,21 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] template_thumbnail.png (200x150)
 - [ ] optional AppCache (show definable offline message (offline.php instead of index.php)) http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache
 - [ ] Manual for Template (inluding links for favicon generator, script-fu-icons, usage of articles(templates for tinymce), etc) html into description)
-- [ ] Features in Description
-- [ ] Folder "res" with eg scm-skript
+- [ ] Features into Description
 - [ ] *.zip into Repo
 - [ ] BugFixing http://jsfiddle.net/DSigmund/ExGU3/4/
+- [ ] Optional Full header image instead of logo and text
+- [X] Header Background Color
+- [ ] Optional Fonts and Colors for h1, h2, h3
+- [ ] set default font or google font
+- [X] Group templateDetails.xml fields into sets
+- [ ] Optional Elements with assist color (eg borders)
+- [X] Mobile Option to hide Social Icons (Textonly)
+- [ ] Header Optional Site Description (desktop only)
+- [ ] Social Media Icon Styles
+- [X] CSS for fieldsets (eg contact)
+- [X] CSS for blog column layout 
+- [ ] Check for colors in template.css and bring to index.php
+- [ ] error.php http://www.12punkt.ch/joomla-3-x/templates/item/507-errorphp-datei-erstellen.html
+- [ ] minify files
 
