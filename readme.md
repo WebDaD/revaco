@@ -67,7 +67,8 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [x] CSS for blog column layout 
 - [ ] Check for colors in template.css and bring to index.php
 - [ ] error.php http://www.12punkt.ch/joomla-3-x/templates/item/507-errorphp-datei-erstellen.html
-
+- [ ] Remove unused social media icons
+- 
 
 ### 4 (Version2) YYYY-MM-DD
 - [ ] Social Media Icon Styles
@@ -75,3 +76,8 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Social Media Yelp
 - [ ] optional AppCache (show definable offline message (offline.php instead of index.php)) http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache
 - [ ] minify files
+
+## Addtionial Projects
+
+- Version for Wordpress
+- Version for Tools with XML-Config-File (Navigation?)

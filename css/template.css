@@ -45,10 +45,10 @@ text
 = Default Text, mixed with images. just place them, they will float automaticelly. also there are dividers, headlines and divider-headlines
 */
 h3.block {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
-p.block {width:46%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:left;}
+p.block {width:46%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:justify;}
 img.block{width:46%;min-width:300px;max-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;display:inline;}
 
-p.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;}
+p.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
 h3.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
 
 * div.blog * .left_col{width:100%;} /*Fix for Blog Layout*/
