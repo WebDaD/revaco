@@ -50,7 +50,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Optional upper right 2nd Image (Desktop only) (yesno,path)
 - [ ] template_preview.png (600x400)
 - [ ] template_thumbnail.png (200x150)
-
+- [ ] Optional Definition Lists with CSS Class as Accordeon
 - [ ] Manual for Template (inluding links for favicon generator, script-fu-icons, usage of articles(templates for tinymce), etc) html into description)
 - [ ] Features into Description
 - [ ] *.zip into Repo
