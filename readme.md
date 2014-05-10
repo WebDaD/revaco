@@ -12,6 +12,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 
 ## Manual
 
+Description of Fields, how to create FavIcon, Icons, Startup-Images
 
 ## MileStones
 
@@ -50,7 +51,6 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Optional upper right 2nd Image (Desktop only) (yesno,path)
 - [ ] template_preview.png (600x400)
 - [ ] template_thumbnail.png (200x150)
-- [ ] Optional Definition Lists with CSS Class as Accordeon
 - [ ] Manual for Template (inluding links for favicon generator, script-fu-icons, usage of articles(templates for tinymce), etc) html into description)
 - [ ] Features into Description
 - [ ] *.zip into Repo
@@ -68,7 +68,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Check for colors in template.css and bring to index.php
 - [ ] error.php http://www.12punkt.ch/joomla-3-x/templates/item/507-errorphp-datei-erstellen.html
 - [ ] Remove unused social media icons
-- 
+
 
 ### 4 (Version2) YYYY-MM-DD
 - [ ] Social Media Icon Styles
@@ -76,8 +76,10 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 - [ ] Social Media Yelp
 - [ ] optional AppCache (show definable offline message (offline.php instead of index.php)) http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache
 - [ ] minify files
+- [ ] Internal Optional Gallerys (p.gallery => display, jscript...) on first use create thumbnails
+- [ ] Optional Definition Lists with CSS Class as Accordeon
 
-## Addtionial Projects
+## Additional Projects
 
 - Version for Wordpress
 - Version for Tools with XML-Config-File (Navigation?)
