@@ -11,10 +11,12 @@
         <description>TPL_REVACO_XML_DESCRIPTION</description>
         <files>
                 <filename>index.php</filename>
+                <filename>error.php</filename>
+                <filename>component.php</filename>
                 <filename>templateDetails.xml</filename>
                 <filename>readme.md</filename>
-                <!-- TODO: template_preview -->
-                <!-- TODO: template_thumbnail -->
+                <filename>template_preview.png</filename>
+                <filename>template_thumbnail.png</filename>
                 <folder>images</folder>
                 <folder>css</folder>
                 <folder>js</folder>
