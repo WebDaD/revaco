@@ -93,7 +93,7 @@
 				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
 					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
-					
+				<field type="spacer" name="W0" hr="true" />	
 				<field name="header_second_image_show"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -128,16 +128,7 @@
 					<option value="0">JNO</option>
 				</field>
 			
-				<field name="lazyload"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="1"
-					label="TPL_REVACO_LAYLOAD_LABEL"
-					description="TPL_REVACO_LAZYLOAD_DESC"
-				>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+				
 				
 				<field name="show_sm_icons"
 					type="radio"
@@ -145,6 +136,18 @@
 					default="1"
 					label="TPL_REVACO_SHOW_SM_ICONS_LABEL"
 					description="TPL_REVACO_SHOW_SM_ICONS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="plugins">
+			<field name="lazyload"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_LAYLOAD_LABEL"
+					description="TPL_REVACO_LAZYLOAD_DESC"
 				>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -194,7 +197,7 @@
 				<field name="logo-57x57" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_57x57_LABEL"
 					description="TPL_REVACO_LOGO_57x57_DESC" />
-
+				<field type="spacer" name="myspacer1" hr="true" />	
 				<field name="startup-1536x2008" class="" type="media" default=""
 					label="TPL_REVACO_STARTUP_1536x2008_LABEL"
 					description="TPL_REVACO_STARTUP_1536x2008_DESC" />
@@ -237,7 +240,7 @@
 				<field name="facebook_link" class="" type="url" default=""
 					label="TPL_REVACO_FACEBOOK_LINK_LABEL"
 					description="TPL_REVACO_FACEBOOK_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer2" hr="true" />	
 				<field name="googleplus"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -251,7 +254,7 @@
 				<field name="googleplus_link" class="" type="url" default=""
 					label="TPL_REVACO_GOOGLEPLUS_LINK_LABEL"
 					description="TPL_REVACO_GOOGLEPLUS_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer3" hr="true" />	
 				<field name="twitter"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -265,7 +268,7 @@
 				<field name="twitter_link" class="" type="url" default=""
 					label="TPL_REVACO_TWITTER_LINK_LABEL"
 					description="TPL_REVACO_TWITTER_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer4" hr="true" />	
 				<field name="rss"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -279,7 +282,7 @@
 				<field name="rss_link" class="" type="url" default=""
 					label="TPL_REVACO_RSS_LINK_LABEL"
 					description="TPL_REVACO_RSS_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer5" hr="true" />	
 				<field name="podcast"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -293,7 +296,7 @@
 				<field name="podcast_link" class="" type="url" default=""
 					label="TPL_REVACO_PODCAST_LINK_LABEL"
 					description="TPL_REVACO_PODCAST_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer6" hr="true" />	
 				<field name="youtube"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -307,7 +310,7 @@
 				<field name="youtube_link" class="" type="url" default=""
 					label="TPL_REVACO_YOUTUBE_LINK_LABEL"
 					description="TPL_REVACO_YOUTUBE_LINK_DESC" />
-				
+				<field type="spacer" name="myspacer7" hr="true" />	
 				<field name="foursquare"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -321,7 +324,7 @@
 				<field name="foursquare_link" class="" type="url" default=""
 					label="TPL_REVACO_FOURSQUARE_LINK_LABEL"
 					description="TPL_REVACO_FOURSQUARE_LINK_DESC" />
-					
+				<field type="spacer" name="myspacer8" hr="true" />		
 			</fieldset>
 			<fieldset name="analytics">
 				<field name="clickheat"
@@ -343,7 +346,7 @@
 				<field name="clickheat_group" class="" type="text" default=""
 					label="TPL_REVACO_CLICKHEAT_GROUP_LABEL"
 					description="TPL_REVACO_CLICKHEAT_GROUP_DESC" />
-					
+				<field type="spacer" name="myspacer9" hr="true" />		
 				<field name="analytics"
 					type="radio"
 					class="btn-group btn-group-yesno"
