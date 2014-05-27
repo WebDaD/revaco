@@ -82,9 +82,7 @@
 					label="TPL_REVACO_BACKCOLOR_LABEL"
 					description="TPL_REVACO_BACKCOLOR_DESC" />
 					
-				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
-					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
-					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
+				
 					
 				<field name="footer_color" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_FOOTER_COLOR_LABEL"
@@ -92,12 +90,31 @@
 			</fieldset>
 		
 			<fieldset name="header">
-			
+				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
+					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
+					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
+					
+				<field name="header_second_image_show"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_HEADER_SECOND_SHOW_LABEL"
+					description="TPL_REVACO_HEADER_SECOND_SHOW_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>	
+				<field name="header_second_image" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_HEADER_SECOND_LABEL"
+					description="TPL_REVACO_LOGO_HEADER_SECOND_DESC" />
+					
+				<field name="header_second_image_alt"  type="text" default=""
+					label="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
+					description="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
+					filter="string" />
+					
 			</fieldset>
 		
-			<fieldset name="style">
-			
-			</fieldset>
 			
 			<fieldset name="mobile">
 				<field name="swipe"
