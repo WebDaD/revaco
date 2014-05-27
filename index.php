@@ -103,6 +103,8 @@
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}
 
 			#headline{color:<?php echo $this->params->get('main_color');?>;}
+			#headline_desc{color:<?php echo $this->params->get('main_color');?>;}
+			#headdesc{color:<?php echo $this->params->get('comp_color');?>;}
 			
 			ul.menu { background-color: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
 			ul.menu > li > a {color:<?php echo $this->params->get('comp_color');?>;}
@@ -159,7 +161,12 @@
 			</div>
 			<div id="header_desktop" class="desktop">
 				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
-				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				<?php if($this->params->get('show_site_description')=="1"):?>
+					<p id="headline_desc"><?php echo $this->params->get('sitetitle');?></p>
+					<p id="headdesc"><?php echo $this->params->get('sitedescription');?></p>
+				<?php else: ?>
+					<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				<?php endif;?>
 			</div>
 			<nav id="navigation"> 
 				<jdoc:include type="modules" name="navigation" style="none" />

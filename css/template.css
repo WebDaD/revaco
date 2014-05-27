@@ -310,6 +310,9 @@ table.weblinks th, table.category th {
 #logo{float:left;width:114px;}
 #headline{float:left;font-size:36pt;height:114px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:114px;vertical-align:middle;}
 
+#headline_desc{float:left;font-size:24pt;height:73px;margin-bottom:6px;margin-top:0px;margin-left:2%;line-height:73px;vertical-align:middle;}
+#headdesc{float:left;font-size:12pt;height:35px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:35px;vertical-align:middle;}
+
 /*NAVIGATION*/
 #navigation{clear:both;margin-bottom:2%;}
 ul { list-style: none outside none;  }
