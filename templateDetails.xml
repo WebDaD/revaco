@@ -74,6 +74,10 @@
 				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
 					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
+					
+				<field name="footer_color" class="" type="color" default="#FFFFFF"
+					label="TPL_REVACO_FOOTER_COLOR_LABEL"
+					description="TPL_REVACO_FOOTER_COLOR_DESC" />
 			</fieldset>
 		
 			<fieldset name="header">

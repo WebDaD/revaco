@@ -118,7 +118,7 @@
 
 			#content{border-left-color:<?php echo $this->params->get('assisting_color');?>;}
 			
-			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;}
+			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;background: <?php echo $this->params->get('footer_color');?>;}
 			a#impressum{color:<?php echo $this->params->get('main_color');?>;}
 			a#impressum:hover{text-shadow: 0 0 5px <?php echo $this->params->get('assisting_color');?>;}
 			
