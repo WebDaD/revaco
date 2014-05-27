@@ -1,9 +1,36 @@
 <?php defined( '_JEXEC' ) or die( 'Restricted access' );?>
 <?php $params = JFactory::getApplication()->getTemplate(true)->params;?>
+<?php $document = JFactory::getDocument();?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
    <head>
+   		<meta charset="<?php echo $document->getCharset();?>" />
+		<base href="<?php echo $document->getBase();?>" />
+		
+		<?php foreach ($document->_metaTags as $type => $tag):?>
+			<?php foreach ($tag as $name => $content):?>
+				<?php if ($type == 'http-equiv' && !($document->isHtml5() && $name == 'content-type')):?>
+					<meta http-equiv="<?php echo $name; ?>" content="<?php echo htmlspecialchars($content);?>"/>
+				<?php elseif ($type == 'standard' && !empty($content)):?>
+					<meta name="<?php echo $name; ?>" content="<?php echo htmlspecialchars($content);?>"/>
+				<?php endif;?>
+			<?php endforeach;?>
+		<?php endforeach;?>
+   
+   		
+		<?php if ($document->getDescription()):?>
+			<meta name="description" content="<?php echo htmlspecialchars($document->getDescription());?>" />
+		<?php endif;?>
+
+		<?php if ($document->getGenerator()):?>
+			<meta name="generator" content="<?php echo htmlspecialchars($document->getGenerator());?>" />
+		<?php endif;?>
+
+		<title><?php echo htmlspecialchars($document->getTitle(), ENT_COMPAT, 'UTF-8');?></title>
+   		
+   		
    		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -70,30 +97,33 @@
 		
 		<meta name="viewport" content="width=device-width">
    
-		<jdoc:include type="head" />
+		
+		
 		
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
 		
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 		
-		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
-		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-1.11.0.min.js" type="text/javascript" ></script>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js"></script>
 		
 		<?php if($this->params->get('swipe')=="1"):?>
-			<script src="js/jquery.touchSwipe.min.js"></script>
-			<script src="js/swipe.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.touchSwipe.min.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/swipe.js"></script>
 		<?php endif;?>
 		
 		<?php if($this->params->get('lazyload')=="1"):?>
-			<script src="js/jquery.unveil.min.js"></script>
-			<script src="js/lazy.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.unveil.min.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lazy.js"></script>
 		<?php endif;?>
 
 		<style>
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
+			#container{background:#FFFFFF;}
+			
 			h1,h2,h3{color:<?php echo $this->params->get('main_color');?>;}
 			
 			#header_desktop{background:<?php echo $this->params->get('header_backcolor');?>;}:
@@ -104,20 +134,22 @@
 
 			#headline{color:<?php echo $this->params->get('main_color');?>;}
 			#headline_desc{color:<?php echo $this->params->get('main_color');?>;}
-			#headdesc{color:<?php echo $this->params->get('comp_color');?>;}
+			#headdesc{color:<?php echo $this->params->get('assisting_color');?>;}
+			
 			
 			ul.menu { background-color: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
 			ul.menu > li > a {color:<?php echo $this->params->get('comp_color');?>;}
 			ul.menu > li > a:hover, ul.menu > li:hover > a { background: <?php echo $this->params->get('comp_color');?>; color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu ul > li { background-color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu ul > li a {color:<?php echo $this->params->get('comp_color');?>;}
-			ul.menu ul > li a:hover,ul.menu ul > li:hover a { background: <?php echo $this->params->get('comp_color');?>;color:#990000; }
+			ul.menu ul > li a:hover,ul.menu ul > li:hover a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu ul ul li a:hover { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu li.parent.deeper  ul  li.parent.deeper  ul li  a:hover{ background: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>; }
 			ul.menu > li.parent > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
-			ul.menu > li.active { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
-
+			ul.menu > li.active > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?> !important;font-weight:bold; }
+			
+			
 			#content{border-left-color:<?php echo $this->params->get('assisting_color');?>;}
 			
 			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;background: <?php echo $this->params->get('footer_color');?>;}
@@ -156,13 +188,25 @@
 			 <a href="#" id="menuToggler">
 		        <span class="icon icon-menu">&#9776;</span>
 		    </a>
-				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
+		    	<?php if($this->params->get('lazyload')=="1"):?>
+					<img id="logo_white" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
+				<?php else: ?>
+					<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
+				<?php endif;?>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
 			</div>
 			<div id="header_desktop" class="desktop">
-				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+				<?php if($this->params->get('lazyload')=="1"):?>
+					<img id="logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+				<?php else:?>
+					<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+				<?php endif;?>
 				<?php if($this->params->get('header_second_image_show')=="1"):?>
+					<?php if($this->params->get('lazyload')=="1"):?>
+						<img id="second_logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
+					<?php else: ?>
 					<img id="second_logo" src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
+					<?php endif;?>
 				<?php endif;?>
 				<?php if($this->params->get('show_site_description')=="1"):?>
 					<p id="headline_desc"><?php echo $this->params->get('sitetitle');?></p>
@@ -180,13 +224,76 @@
 			</div>
 			<div id="footer">
 				<div id="footer_left">
-					<?php if($this->params->get('facebook')=="1"):?><a class="social" href="<?php echo $this->params->get('facebook_link');?>"><img class="social_icon" src="img/socialmedia/fb.png" alt="Facebook" title="<?php echo $this->params->get('facebook_link');?>"/><span class="social_text">Facebook</span></a><?php endif;?>
-					<?php if($this->params->get('googleplus')=="1"):?><a class="social" href="<?php echo $this->params->get('googleplus_link');?>"><img class="social_icon" src="img/socialmedia/google+.png" alt="Google+" title="<?php echo $this->params->get('googleplus_link');?>"/><span class="social_text">Google+</span></a><?php endif;?>
-					<?php if($this->params->get('twitter')=="1"):?><a class="social" href="<?php echo $this->params->get('twitter_link');?>"><img class="social_icon" src="img/socialmedia/twitter.png" alt="Twitter" title="<?php echo $this->params->get('twitter_link');?>"/><span class="social_text">Twitter</span></a><?php endif;?>
-					<?php if($this->params->get('rss')=="1"):?><a class="social" href="<?php echo $this->params->get('rss_link');?>"><img class="social_icon" src="img/socialmedia/rss.png" alt="RSS" title="<?php echo $this->params->get('rss_link');?>"/><span class="social_text">RSS</span></a><?php endif;?>
-					<?php if($this->params->get('podcast')=="1"):?><a class="social" href="<?php echo $this->params->get('podcast_link');?>"><img class="social_icon" src="img/socialmedia/music.png" alt="Podcast" title="<?php echo $this->params->get('podcast_link');?>"/><span class="social_text">Podcast</span></a><?php endif;?>
-					<?php if($this->params->get('youtube')=="1"):?><a class="social" href="<?php echo $this->params->get('youtube_link');?>"><img class="social_icon" src="img/socialmedia/youtube.png" alt="YouTube" title="<?php echo $this->params->get('youtube_link');?>"/><span class="social_text">YouTube</span></a><?php endif;?>
-					<?php if($this->params->get('foursquare')=="1"):?><a class="social" href="<?php echo $this->params->get('foursquare_link');?>"><img class="social_icon" src="img/socialmedia/foursquare.png" alt="FourSquare" title="<?php echo $this->params->get('foursquare_link');?>"/><span class="social_text">FourSquare</span></a><?php endif;?>
+					<?php if($this->params->get('facebook')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('facebook_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/fb.png" alt="Facebook" title="<?php echo $this->params->get('facebook_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/fb.png" alt="Facebook" title="<?php echo $this->params->get('facebook_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">Facebook</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('googleplus')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('googleplus_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/google+.png" alt="Google+" title="<?php echo $this->params->get('googleplus_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/google+.png" alt="Google+" title="<?php echo $this->params->get('googleplus_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">Google+</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('twitter')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('twitter_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/twitter.png" alt="Twitter" title="<?php echo $this->params->get('twitter_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/twitter.png" alt="Twitter" title="<?php echo $this->params->get('twitter_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">Twitter</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('rss')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('rss_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/rss.png" alt="RSS" title="<?php echo $this->params->get('rss_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/rss.png" alt="RSS" title="<?php echo $this->params->get('rss_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">RSS</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('podcast')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('podcast_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/music.png" alt="Podcast" title="<?php echo $this->params->get('podcast_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/music.png" alt="Podcast" title="<?php echo $this->params->get('podcast_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">Podcast</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('youtube')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('youtube_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/youtube.png" alt="YouTube" title="<?php echo $this->params->get('youtube_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/youtube.png" alt="YouTube" title="<?php echo $this->params->get('youtube_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">YouTube</span>
+						</a>
+					<?php endif;?>
+					<?php if($this->params->get('foursquare')=="1"):?>
+						<a target="_blank" class="social" href="<?php echo $this->params->get('foursquare_link');?>">
+							<?php if($this->params->get('lazyload')=="1"):?>
+								<img class="social_icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/foursquare.png" alt="FourSquare" title="<?php echo $this->params->get('foursquare_link');?>"/>
+							<?php else:?>
+								<img class="social_icon" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/socialmedia/foursquare.png" alt="FourSquare" title="<?php echo $this->params->get('foursquare_link');?>"/>
+							<?php endif;?>
+							<span class="social_text">FourSquare</span>
+						</a>
+					<?php endif;?>
 				</div>
 				<div id="footer_right">
 					<a id="impressum" href="<?php echo $this->params->get('impressum_link');?>">Impressum</a>

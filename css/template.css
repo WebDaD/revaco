@@ -8,6 +8,7 @@ body{margin:0;padding:0;}
 a{}
 a:hover{}
 
+
 /*Content*/
 /*
 Main News
@@ -385,6 +386,7 @@ transition: all 250ms ease-in-out;}/*TODO: Text shadow*/
 .desktop{display:none;}
 .mobile{display:block;}
 
+img{max-width:300px;height:auto;}
 
 /*HEADER*/
 #header_mobile{height:48px;}
