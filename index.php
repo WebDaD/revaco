@@ -1,7 +1,7 @@
 <?php defined( '_JEXEC' ) or die( 'Restricted access' );?>
 <?php $params = JFactory::getApplication()->getTemplate(true)->params;?>
 <?php $document = JFactory::getDocument();?>
-
+<?php $menuicon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gUcBi0a7wpvjwAAAEFJREFUOMvdk8ENwEAMwuCUAdr9Z7mOFncG8gx/S2AJA4/CuLtJobKtGAJySNKrXTFwJ1Cs70zqFfAtVL7tGqNNP6gyIr0pqNSJAAAAAElFTkSuQmCC";?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -186,7 +186,11 @@
 		<div id="container">
 			<div id="header_mobile" class="mobile">
 			 <a href="#" id="menuToggler">
-		        <span class="icon icon-menu">&#9776;</span>
+			 	<?php if($this->params->get('lazyload')=="1"):?>
+		        	<img class="icon icon-menu" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $menuicon;?>"/>
+		    	<?php else:?>
+		    		<img class="icon icon-menu" src="<?php echo $menuicon;?>"/>
+		    	<?php endif;?>
 		    </a>
 		    	<?php if($this->params->get('lazyload')=="1"):?>
 					<img id="logo_white" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>

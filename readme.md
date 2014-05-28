@@ -15,16 +15,26 @@ http://jsfiddle.net/DSigmund/ExGU3/4/
 - Swipe
 - LazyLoad
 
-## Manual
+## Intructions
 
-Description of Fields, how to create FavIcon, Icons, Startup-Images
+### LazyLoad
+To use Lazyload, just go into sourcecode-view in your articles and replace in all images src with data-src.
+
+e.g.
+```
+<img src="/path/to/img.png" />
+```
+to
+```
+<img data-src="/path/to/img.png" />
+```
 
 ## MileStones
 
 See Issues
 
 
-## Additional Projects
+## Planed Additional Projects
 
 - Version for Wordpress
 - Version for Tools with XML-Config-File (Navigation?)
