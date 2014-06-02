@@ -17,17 +17,6 @@ http://jsfiddle.net/DSigmund/ExGU3/4/
 
 ## Intructions
 
-### LazyLoad
-To use Lazyload, just go into sourcecode-view in your articles and replace in all images src with data-src.
-
-e.g.
-```
-<img src="/path/to/img.png" />
-```
-to
-```
-<img data-src="/path/to/img.png" />
-```
 
 ## MileStones
 
