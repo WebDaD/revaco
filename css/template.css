@@ -379,6 +379,12 @@ transition: all 250ms ease-in-out;}/*TODO: Text shadow*/
 
 @media screen and (max-width: 800px) {
 	/*OVERWRITING FOR MOBILE*/
+	
+/*content elements for mobile*/
+div.person {width:100%;}
+div.nav_link{width:100%;}	
+p.block{width:100%;}	
+img.block{width:100%;}	
 
 #container{width:100%;}
 
