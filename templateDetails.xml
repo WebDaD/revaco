@@ -153,6 +153,10 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+			<field name="lazyload_threshold"  type="text" default="0" required="true"
+					label="TPL_REVACO_LAZYLOAD_THRESHOLD_LABEL"
+					description="TPL_REVACO_LAZYLOAD_THRESHOLD_DESC"
+					filter="string" />
 			</fieldset>
 			<fieldset name="icons">
 				<field name="favicon" class="" type="media" default=""

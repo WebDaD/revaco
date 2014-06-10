@@ -109,16 +109,23 @@
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-ui-1.10.4.custom.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js"></script>
 		
+		
+		<!-- Plugins -->
 		<?php if($this->params->get('swipe')=="1"):?>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.touchSwipe.min.js"></script>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/swipe.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/swipe/jquery.touchSwipe.min.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/swipe/swipe.js"></script>
 		<?php endif;?>
 		
 		<?php if($this->params->get('lazyload')=="1"):?>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.unveil.min.js"></script>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/lazy.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/jquery.unveil.min.js"></script>
+			<script>
+				var lazyload_config={threshold:<?php echo $this->params->get('lazyload_threshold');?>};
+			</script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/lazy.js"></script>
 		<?php endif;?>
 
+		
+		<!-- Plugins End -->
 		<style>
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
