@@ -124,6 +124,15 @@
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/lazy.js"></script>
 		<?php endif;?>
 
+		<?php if($this->params->get('youtube')=="1"):?>
+			<script>
+				var youtube = {
+						width:<?php echo $this->params->get('youtube_width');?>,
+						height:<?php echo $this->params->get('youtube_height');?>
+				};
+			</script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/youtube/youtube.js"></script>
+		<?php endif;?>
 		
 		<!-- Plugins End -->
 		<style>

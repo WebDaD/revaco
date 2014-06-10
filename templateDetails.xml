@@ -157,6 +157,27 @@
 					label="TPL_REVACO_LAZYLOAD_THRESHOLD_LABEL"
 					description="TPL_REVACO_LAZYLOAD_THRESHOLD_DESC"
 					filter="string" />
+					
+			<field type="spacer" name="myspacer10" hr="true" />	
+				
+			<field name="youtube"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_YOUTUBE_LABEL"
+					description="TPL_REVACO_YOUTUBE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			<field name="youtube_width"  type="text" default="560" required="true"
+					label="TPL_REVACO_YOUTUBE_WIDTH_LABEL"
+					description="TPL_REVACO_YOUTUBE_WIDTH_DESC"
+					filter="string" />
+			<field name="youtube_height"  type="text" default="315" required="true"
+					label="TPL_REVACO_YOUTUBE_HEIGHT_LABEL"
+					description="TPL_REVACO_YOUTUBE_HEIGHT_DESC"
+					filter="string" />
 			</fieldset>
 			<fieldset name="icons">
 				<field name="favicon" class="" type="media" default=""

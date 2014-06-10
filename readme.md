@@ -17,6 +17,13 @@ http://jsfiddle.net/DSigmund/ExGU3/4/
 
 ## Intructions
 
+### Plugins
+
+#### YouTube
+This Plugin converts a youtube-URL to a embedded Video.
+You can write:
+- ``<p class="youtube">URL</p>`` to use the default Values defined.
+- ``<p class="youtube">url=https://www.youtube.com/watch?v=k4CDEhUE8YA;width=WWW;height=HHH</p>`` to overwrite the default Values for this Video
 
 ## MileStones
 
