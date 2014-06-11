@@ -42,7 +42,7 @@ div.nav_link p {float:left;width:70%;margin-top:0;margin-bottom:0;}/*intro*/
 div.nav_link a:after {content:" >>> ";}
 
 /*
-text
+block
 = Default Text, mixed with images. just place them, they will float automaticelly. also there are dividers, headlines and divider-headlines
 */
 h3.block {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
@@ -52,7 +52,18 @@ img.block{width:46%;min-width:300px;max-width:300px;float:left;margin: 2% 2% 2% 
 p.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
 h3.divider {width:96%;min-width:300px;float:left;margin: 2% 2% 2% 2%;text-align:center;}
 
-* div.blog * .left_col{width:100%;} /*Fix for Blog Layout*/
+* div.blog * .block{width:100%;} /*Fix for Blog Layout*/
+
+/*
+intro
+= Intro (image, text) for article, will no be displayed if article and have the readmore at the end
+*/
+div.intro{width:100%;border-top-size:1px;border-top-style:solid;margin-bottom:10px;}
+div.intro:after{content:"<hr id="system-readmore" />";}
+div.intro img{width:49%;float:left;}
+div.intro p{width:49%;float:left;margin-left:2px;}
+
+* div.item-page * div.intro{display:none;}
 
 
 

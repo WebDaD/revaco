@@ -147,6 +147,8 @@
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}
+			
+			div.intro{border-color:<?php echo $this->params->get('main_color');?>;}
 
 			#headline{color:<?php echo $this->params->get('main_color');?>;}
 			#headline_desc{color:<?php echo $this->params->get('main_color');?>;}
