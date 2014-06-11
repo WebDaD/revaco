@@ -10,5 +10,5 @@ $( document ).ready(function() {
 		$(this).attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
 	});  
 	
-	$("img").unveil(lazyload_config.threshold);
+	$("img").unveil(lazyload.threshold);
 });

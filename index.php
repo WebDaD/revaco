@@ -119,7 +119,9 @@
 		<?php if($this->params->get('lazyload')=="1"):?>
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/jquery.unveil.min.js"></script>
 			<script>
-				var lazyload_config={threshold:<?php echo $this->params->get('lazyload_threshold');?>};
+				var lazyload = {
+						threshold:<?php echo $this->params->get('lazyload_threshold');?>px
+				};
 			</script>
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/lazy.js"></script>
 		<?php endif;?>
