@@ -10,5 +10,10 @@ $( document ).ready(function() {
 		$(this).attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
 	});  
 	
-	$("img").unveil(lazyload.threshold);
+	if(lazyload.threshold == 0){
+		$("img").unveil();
+	} else {
+		$("img").unveil(lazyload.threshold+"px");
+	}
+	
 });

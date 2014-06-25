@@ -120,7 +120,7 @@
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/jquery.unveil.min.js"></script>
 			<script>
 				var lazyload = {
-						threshold:<?php echo $this->params->get('lazyload_threshold');?>px
+						threshold:<?php echo $this->params->get('lazyload_threshold');?>
 				};
 			</script>
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/lazyload/lazy.js"></script>
@@ -143,6 +143,8 @@
 			#container{background:#FFFFFF;}
 			
 			h1,h2,h3{color:<?php echo $this->params->get('main_color');?>;}
+			
+			.readmore a{color:<?php echo $this->params->get('main_color');?>;}
 			
 			#header_desktop{background:<?php echo $this->params->get('header_backcolor');?>;}:
 			
@@ -188,7 +190,9 @@
 				ul.menu li:hover a{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
   				ul.menu li:hover ul{color:<?php echo $this->params->get('main_color');?>;background-color:<?php echo $this->params->get('comp_color');?>;}
     			ul.menu li:hover ul li:hover a{color:<?php echo $this->params->get('main_color');?>;background-color:<?php echo $this->params->get('comp_color');?>;}
-    			ul.menu li:hover ul li:hover ul li:hover a{background-color:<?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
+    			ul.menu li:hover ul li:hover ul li:hover a{color:<?php echo $this->params->get('main_color');?>;background-color:<?php echo $this->params->get('comp_color');?>;}
+				
+				ul.menu li.parent.deeper ul li.parent.deeper ul li a:hover {color:<?php echo $this->params->get('comp_color');?>;}
 				
 				a.social{border-bottom-color:<?php echo $this->params->get('comp_color');?>;background-color:<?php echo $this->params->get('main_color');?>;}
 				a.social:hover{background-color:<?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>;}

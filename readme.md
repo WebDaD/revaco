@@ -5,7 +5,7 @@ Responsive Variable Colors. A clear template with 2 colors. Will change header a
 
 Temporary DemoPage:
 
-http://jsfiddle.net/DSigmund/ExGU3/4/
+http://jsfiddle.net/ExGU3/6/embedded/result/
 
 ## Features
 
