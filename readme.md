@@ -3,6 +3,7 @@
 Responsive Variable Colors. A clear template with 2 colors. Will change header and footer on mobile using multiple css files. Will also use jquery to style navigation
 
 
+
 Temporary DemoPage:
 
 http://jsfiddle.net/ExGU3/6/embedded/result/
