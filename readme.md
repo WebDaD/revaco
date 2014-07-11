@@ -18,6 +18,16 @@ http://jsfiddle.net/ExGU3/6/embedded/result/
 
 ## Intructions
 
+### Link Effects
+YOu can decorate your Links to hava some effects on mouse-hover.
+Just add the following class to get an effect: (``<a class="[CLASS/ES]" href="">``)
+- `.grow` : Grow the Element
+- `.glow` : Let the Element glow
+- `.underline` : produce an underline
+- `.blod`: have bold font
+- `.italic`: have italic font
+- `.smooth`: Let all the above magic happen in a smooth movement
+
 ### Plugins
 
 #### YouTube
