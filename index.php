@@ -140,7 +140,8 @@
 		<style>
 		
 			/*Link Effects Part2 (with color. part1 is in css/template.css)*/
-			
+			.glow:hover img{-webkit-box-shadow: 0 0 5px 5px <?php echo $this->params->get('assisting_color');?>;box-shadow: 0 0 5px 5px <?php echo $this->params->get('assisting_color');?>;}
+			.glow:hover{text-shadow: 0 0 5px <?php echo $this->params->get('assisting_color');?>;}
 			/*Link Effects End*/
 		
 			body{background:<?php echo $this->params->get('back_color');?>;}
