@@ -28,6 +28,8 @@
                 <position>news</position>
                 <position>search</position>
                 <position>flags</position>
+                <position>header</position>
+                <position>preheader</position>
         </positions>
         <languages folder="language">
             <language tag="de-DE">de-DE/de-DE.tpl_revaco.ini</language>
@@ -91,6 +93,26 @@
 			</fieldset>
 		
 			<fieldset name="header">
+				<field name="header_module"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_HEADER_MODULE_LABEL"
+					description="TPL_REVACO_HEADER_MODULE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>	
+				<field name="preheader_module"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_PREHEADER_MODULE_LABEL"
+					description="TPL_REVACO_PREHEADER_MODULE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>	
 				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
 					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />

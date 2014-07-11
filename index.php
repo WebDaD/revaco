@@ -217,18 +217,29 @@
 				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>"/>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
 			</div>
-			<div id="header_desktop" class="desktop">
-				<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
-				<?php if($this->params->get('header_second_image_show')=="1"):?>
-					<img id="second_logo" src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
-				<?php endif;?>
-				<?php if($this->params->get('show_site_description')=="1"):?>
-					<p id="headline_desc"><?php echo $this->params->get('sitetitle');?></p>
-					<p id="headdesc"><?php echo $this->params->get('sitedescription');?></p>
-				<?php else: ?>
-					<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
-				<?php endif;?>
-			</div>
+			<?php if($this->params->get('header_module')=="1"):?>
+				<div id="header_desktop" class="desktop">
+					<jdoc:include type="modules" name="header" style="none" />
+				</div>
+			<?php else:?>
+				<?php if($this->params->get('preheader_module')=="1"):?>
+					<div id="preheader" class="desktop">
+						<jdoc:include type="modules" name="preheader" style="none" />
+					</div>
+				<?php else:?>
+				<div id="header_desktop" class="desktop">
+					<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php if($this->params->get('header_second_image_show')=="1"):?>
+						<img id="second_logo" src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
+					<?php endif;?>
+					<?php if($this->params->get('show_site_description')=="1"):?>
+						<p id="headline_desc"><?php echo $this->params->get('sitetitle');?></p>
+						<p id="headdesc"><?php echo $this->params->get('sitedescription');?></p>
+					<?php else: ?>
+						<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+					<?php endif;?>
+				</div>
+			<?php endif;?>
 			<nav id="navigation"> 
 				<jdoc:include type="modules" name="navigation" style="none" />
 			</nav>
