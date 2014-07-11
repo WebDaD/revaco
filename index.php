@@ -108,7 +108,7 @@
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-ui-1.10.4.custom.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/main.js"></script>
-		
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/effects.js"></script>
 		
 		<!-- Plugins -->
 		<?php if($this->params->get('swipe')=="1"):?>
@@ -138,6 +138,11 @@
 		
 		<!-- Plugins End -->
 		<style>
+		
+			/*Link Effects Part2 (with color. part1 is in css/template.css)*/
+			
+			/*Link Effects End*/
+		
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
 			#container{background:#FFFFFF;}

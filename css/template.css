@@ -4,6 +4,23 @@ body{margin:0;padding:0;}
 
 /*BASIC STYLING (articels, links, etc)*/
 
+
+/*Link Effects Part1 (without color. part2 is in index.php)*/
+
+/*Smooth: let Effects be smooth*/
+.smooth:hover,.smooth:hover *{transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+  -ms-transition: all 1s; /* IE9 (maybe) */}
+.smooth,.smooth *{transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+  -ms-transition: all 1s; /* IE9 (maybe) */}
+  
+/*Link Effects End*/
+
 /*Elements*/
 a{}
 a:hover{}
