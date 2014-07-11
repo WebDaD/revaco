@@ -8,6 +8,14 @@ Temporary DemoPage:
 
 http://jsfiddle.net/ExGU3/6/embedded/result/
 
+## Installation
+
+Just download the newest version from subfolder bin.
+
+https://github.com/WebDaD/revaco/blob/master/bin/tpl_revaco_1_15.zip?raw=true
+
+Then install it in joomla3 like any other module
+
 ## Features
 
 - Header
