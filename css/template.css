@@ -19,10 +19,13 @@ body{margin:0;padding:0;}
   -o-transition: all 1s; /* Opera */
   -ms-transition: all 1s; /* IE9 (maybe) */}
   
+.underline:hover{text-decoration:underline;}
+.bold:hover{font-weight:bold;}
+.italic:hover{font-style:italic;}
 /*Link Effects End*/
 
 /*Elements*/
-a{}
+a{text-decoration:none}
 a:hover{}
 
 
