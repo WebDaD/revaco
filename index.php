@@ -154,6 +154,14 @@
 			
 			#header_desktop{background:<?php echo $this->params->get('header_backcolor');?>;}:
 			
+			<?php if($this->params->get('header_logo_ratio')=="2"):?>
+				#logo{width:228px;}
+			<?php elseif($this->params->get('header_logo_ratio')=="3"):?>
+				#logo{width:342px;}
+			<?php elseif($this->params->get('header_logo_ratio')=="4"):?>
+				#logo{width:456px;}
+			<?php endif;?>
+			
 			/*Here are all Styles which use colors (Links, nav, etc)*/
 			div.news{border-color:<?php echo $this->params->get('main_color');?>;}
 			div.news h3{color:<?php echo $this->params->get('main_color');?>;}
@@ -232,9 +240,17 @@
 					<div id="preheader" class="desktop">
 						<jdoc:include type="modules" name="preheader" style="none" />
 					</div>
-				<?php else:?>
+				<?php endif;?>
 				<div id="header_desktop" class="desktop">
-					<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php if($this->params->get('header_logo_ratio')=="1"):?>
+						<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x114');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php elseif($this->params->get('header_logo_ratio')=="2"):?>
+						<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x228');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php elseif($this->params->get('header_logo_ratio')=="3"):?>
+						<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x342');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php elseif($this->params->get('header_logo_ratio')=="4"):?>
+						<img id="logo" src="<?php echo JUri::root() . $this->params->get('logo-114x456');?>" title="<?php echo $this->params->get('sitetitle');?>" alt="<?php echo $this->params->get('sitetitle');?>"/>
+					<?php endif;?>
 					<?php if($this->params->get('header_second_image_show')=="1"):?>
 						<img id="second_logo" src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
 					<?php endif;?>

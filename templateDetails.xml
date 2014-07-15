@@ -134,7 +134,14 @@
 					label="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
 					description="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
 					filter="string" />
-					
+				<field name="header_logo_ratio" type="list" default="1"
+					label="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_LABEL"
+					description="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_LABEL">
+						<option value="1">1 : 1</option>
+						<option value="2">1 : 2</option>
+						<option value="3">1 : 3</option>
+						<option value="4">1 : 4</option>
+				</field>
 			</fieldset>
 			<fieldset name="footer">
 				<field name="footer_module"
@@ -242,6 +249,18 @@
 				<field name="logo-114x114" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_ONEONEFOUR_LABEL"
 					description="TPL_REVACO_LOGO_ONEONEFOUR_DESC" />
+				
+				<field name="logo-114x228" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_ONEONEFOUR_TWO_LABEL"
+					description="TPL_REVACO_LOGO_ONEONEFOUR_TWO_DESC" />
+					
+				<field name="logo-114x342" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_ONEONEFOUR_THREE_LABEL"
+					description="TPL_REVACO_LOGO_ONEONEFOUR_THREE_DESC" />
+					
+				<field name="logo-114x456" class="" type="media" default=""
+					label="TPL_REVACO_LOGO_ONEONEFOUR_FOUR_LABEL"
+					description="TPL_REVACO_LOGO_ONEONEFOUR_FOUR_DESC" />
 				
 				<field name="logo-76x76" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_SEVENSIX_LABEL"
