@@ -221,6 +221,22 @@
 				
 			}
 		</style>
+		<?php if($this->params->get('header_googlefont')=="1"):?>
+			<link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('header_googlefont_name');?>' rel='stylesheet' type='text/css' />
+			<style type="text/css">
+				#headline,#headline_desc{
+					font-family: '<?php echo str_replace('+', ' ', $this->params->get('header_googlefont_name'));?>', sans-serif;
+				}
+			</style>
+		<?php endif;?>
+		<?php if($this->params->get('header_webdadfont')=="1"):?>
+			<link href='//fonts.webdad.eu/css/<?php echo $this->params->get('header_webdadfont_name');?>/font.css' rel='stylesheet' type='text/css' />
+			<style type="text/css">
+				#headline,#headline_desc{
+					font-family: '<?php echo str_replace('+', ' ', $this->params->get('header_webdadfont_name'));?>', sans-serif;
+				}
+			</style>
+		<?php endif;?>
 	</head>
 	<body>
 		<div id="container">

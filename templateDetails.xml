@@ -132,16 +132,45 @@
 					
 				<field name="header_second_image_alt"  type="text" default=""
 					label="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
-					description="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
+					description="TPL_REVACO_LOGO_HEADER_SECOND_ALT_DESC"
 					filter="string" />
 				<field name="header_logo_ratio" type="list" default="1"
 					label="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_LABEL"
-					description="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_LABEL">
+					description="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_DESC">
 						<option value="1">1 : 1</option>
 						<option value="2">1 : 2</option>
 						<option value="3">1 : 3</option>
 						<option value="4">1 : 4</option>
 				</field>
+				<field name="header_googlefont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_HEADER_GOOGLEFONT_LABEL"
+					description="TPL_REVACO_GOOGLEFONT_SHOW_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="header_googlefont_name"  type="text" default="Open+Sans"
+					label="TPL_REVACO_HEADER_GOOGLEFONT_NAME_LABEL"
+					description="TPL_REVACO_HEADER_GOOGLEFONT_NAME_DESC"
+					filter="string" />
+				<field name="header_webdadfont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_HEADER_WEBDADFONT_LABEL"
+					description="TPL_REVACO_WEBDADFONT_SHOW_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="header_webdadfont_name"  type="text" default="alexbrush"
+					label="TPL_REVACO_HEADER_WEBDADFONT_NAME_LABEL"
+					description="TPL_REVACO_HEADER_WEBDADFONT_NAME_DESC"
+					filter="string" />
+				
 			</fieldset>
 			<fieldset name="footer">
 				<field name="footer_module"
