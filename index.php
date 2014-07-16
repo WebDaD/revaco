@@ -277,6 +277,9 @@
 					<?php if($this->params->get('header_second_image_show')=="1"):?>
 						<img id="second_logo" src="<?php echo JUri::root() . $this->params->get('header_second_image');?>" title="<?php echo $this->params->get('header_second_image_alt');?>" alt="<?php echo $this->params->get('header_second_image_alt');?>"/>
 					<?php endif;?>
+						<div id="translation">
+								<jdoc:include type="modules" name="translation" style="none" />
+						</div>
 					<?php if($this->params->get('show_site_description')=="1"):?>
 						<p id="headline_desc"><?php echo $this->params->get('sitetitle');?></p>
 						<p id="headdesc"><?php echo $this->params->get('sitedescription');?></p>
