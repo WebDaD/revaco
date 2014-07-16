@@ -148,6 +148,8 @@
 		
 			#container{background:#FFFFFF;}
 			
+			
+			
 			h1,h2,h3{color:<?php echo $this->params->get('main_color');?>;}
 			
 			.readmore a{color:<?php echo $this->params->get('main_color');?>;}
@@ -185,9 +187,14 @@
 			ul.menu > li.parent > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu > li.active > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?> !important;font-weight:bold; }
 			
+			/*CONTENT*/
 			
-			#content{border-left-color:<?php echo $this->params->get('assisting_color');?>;}
-			
+			<?php if($this->params->get('"content_border_left"')=="1"):?>
+				#content{border-left-width:6px;border-left-style:solid;padding-left:2%;border-left-color:<?php echo $this->params->get('assisting_color');?>;}
+			<?php endif;?>
+			<?php if($this->params->get('"content_border_right"')=="1"):?>
+				#content{border-right-width:6px;border-right-style:solid;padding-right:2%;border-right-color:<?php echo $this->params->get('assisting_color');?>;}
+			<?php endif;?>
 			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;background: <?php echo $this->params->get('footer_color');?>;}
 			a#impressum{color:<?php echo $this->params->get('main_color');?>;}
 			a#impressum:hover{text-shadow: 0 0 5px <?php echo $this->params->get('assisting_color');?>;}

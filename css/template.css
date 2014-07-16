@@ -378,9 +378,8 @@ ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-style:solid;border-wi
 .navbutton_active{margin-left:-10px;margin-right:10px; -webkit-transition: margin 300ms ease-in-out;-moz-transition: margin 300ms ease-in-out;transition: margin 300ms ease-in-out;	}
 
 
+#content{clear:both;}
 
-/*CONTENT*/
-#content{clear:both;border-left-width:6px;border-left-style:solid;padding-left:2%;}
 
 /*FOOTER*/
 #footer{border-top-width:4px;border-top-style:solid;margin-top:2%;}

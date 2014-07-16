@@ -188,6 +188,29 @@
 					description="TPL_REVACO_FOOTER_COLOR_DESC" />	
 			</fieldset>
 			
+			<fieldset name="content">
+				<field name="content_border_left"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_CONTENT_BORDER_LEFT_LABEL"
+					description="TPL_REVACO_CONTENT_BORDER_LEFT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="content_border_right"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_CONTENT_BORDER_RIGHT_LABEL"
+					description="TPL_REVACO_CONTENT_BORDER_TIGHT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			
 			<fieldset name="mobile">
 				<field name="swipe"
 					type="radio"
