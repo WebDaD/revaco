@@ -33,6 +33,7 @@
                 <position>header</position>
                 <position>preheader</position>
                 <position>footer</position>
+                <position>footer_left</position>
         </positions>
         <languages folder="language">
             <language tag="de-DE">de-DE/de-DE.tpl_revaco.ini</language>
@@ -195,6 +196,16 @@
 					default="0"
 					label="TPL_REVACO_FOOTER_MODULE_LABEL"
 					description="TPL_REVACO_FOOTER_MODULE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="left_footer_module"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_LEFT_FOOTER_MODULE_LABEL"
+					description="TPL_REVACO_LEFT_FOOTER_MODULE_DESC"
 				>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
