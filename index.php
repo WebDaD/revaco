@@ -157,11 +157,11 @@
 			#header_desktop{background:<?php echo $this->params->get('header_backcolor');?>;}:
 			
 			<?php if($this->params->get('header_logo_ratio')=="2"):?>
-				#logo{width:228px;}
+				#logo{width:228px !important;}
 			<?php elseif($this->params->get('header_logo_ratio')=="3"):?>
-				#logo{width:342px;}
+				#logo{width:342px !important;}
 			<?php elseif($this->params->get('header_logo_ratio')=="4"):?>
-				#logo{width:456px;}
+				#logo{width:456px !important;}
 			<?php endif;?>
 			
 			/*Here are all Styles which use colors (Links, nav, etc)*/
@@ -180,19 +180,22 @@
 			ul.menu > li > a:hover, ul.menu > li:hover > a { background: <?php echo $this->params->get('comp_color');?>; color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu ul > li { background-color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu ul > li a {color:<?php echo $this->params->get('comp_color');?>;}
+			
+			ul.menu > li > a{}/*TODO: if breaker, there will be a pipe befor (in spaces)*/ 
+			
 			ul.menu ul > li a:hover,ul.menu ul > li:hover a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu ul ul li a:hover { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu li.parent.deeper  ul  li.parent.deeper  ul li  a:hover{ background: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>; }
-			ul.menu > li.parent > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
+			
 			ul.menu > li.active > a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?> !important;font-weight:bold; }
 			
 			/*CONTENT*/
 			
-			<?php if($this->params->get('"content_border_left"')=="1"):?>
+			<?php if($this->params->get('content_border_left')=="1"):?>
 				#content{border-left-width:6px;border-left-style:solid;padding-left:2%;border-left-color:<?php echo $this->params->get('assisting_color');?>;}
 			<?php endif;?>
-			<?php if($this->params->get('"content_border_right"')=="1"):?>
+			<?php if($this->params->get('content_border_right')=="1"):?>
 				#content{border-right-width:6px;border-right-style:solid;padding-right:2%;border-right-color:<?php echo $this->params->get('assisting_color');?>;}
 			<?php endif;?>
 			#footer{border-top-color:<?php echo $this->params->get('main_color');?>;background: <?php echo $this->params->get('footer_color');?>;}
