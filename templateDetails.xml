@@ -7,7 +7,7 @@
         <authorUrl>http://www.webdad.eu</authorUrl>
         <copyright>WebDaD 2014</copyright>
         <license>GNU/GPL</license>
-        <version>1.17</version>
+        <version>1.18</version>
         <description>TPL_REVACO_XML_DESCRIPTION</description>
         <files>
                 <filename>index.php</filename>
@@ -174,6 +174,20 @@
 					filter="string" />
 				
 			</fieldset>
+			
+			<fieldset name="navigation">
+				<field name="navigation_spacer"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_NAVIGATION_SPACER_LABEL"
+					description="TPL_REVACO_NAVIGATION_SPACER_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			
 			<fieldset name="footer">
 				<field name="footer_module"
 					type="radio"

@@ -181,7 +181,11 @@
 			ul.menu ul > li { background-color:<?php echo $this->params->get('main_color');?>;}
 			ul.menu ul > li a {color:<?php echo $this->params->get('comp_color');?>;}
 			
-			ul.menu > li > a{}/*TODO: if breaker, there will be a pipe befor (in spaces)*/ 
+			<?php if($this->params->get('navigation_spacer')=="1"):?>
+				ul.menu > li > a:before{content: "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;";} 
+			<?php endif;?>
+			
+			
 			
 			ul.menu ul > li a:hover,ul.menu ul > li:hover a { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
 			ul.menu ul ul li a:hover { background: <?php echo $this->params->get('comp_color');?>;color:<?php echo $this->params->get('main_color');?>; }
