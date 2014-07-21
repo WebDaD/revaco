@@ -315,6 +315,28 @@
 					label="TPL_REVACO_SIMPLEIMAGEROTATOR_TRANSITION_TIME_LABEL"
 					description="TPL_REVACO_SIMPLEIMAGEROTATOR_TRANSITION_TIME_DESC"
 					filter="string" />
+					
+			<field type="spacer" name="myspacer765" hr="true" />	
+					<field name="fancybox"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_FANCYBOX_LABEL"
+					description="TPL_REVACO_FANCYBOX_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+									<field name="fancybox_all_images"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_REVACO_FANCYBOX_ALL_IMAGES_LABEL"
+					description="TPL_REVACO_FANCYBOX_ALL_IMAGES_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 			<fieldset name="icons">
 				<field name="favicon" class="" type="media" default=""

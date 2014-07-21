@@ -4,9 +4,9 @@
 
 $( document ).ready(function() {
 	
-	$(".simpleimagerotator img"){ //Ignore this container
+	$(".simpleimagerotator img").each(function(){ //Ignore this container
 		$(this).addClass("no_lazyload");
-	}
+	});
 	
 	$("img:not(.no_lazyload)").each(function() {  
 		var imgsrc = $(this).attr("src");

@@ -145,6 +145,19 @@
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/imagerotator/simple.js"></script>
 		<?php endif;?>
 		
+		<?php if($this->params->get('fancybox')=="1"):?>
+			<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+			<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+			<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/fancybox/jquery.fancybox-buttons.js?v=1.0.5"></script>
+			<script>
+				var fancybox = {
+						all_images:<?php echo $this->params->get('fancybox_all_images');?>
+				};
+			</script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/fancybox/fancybox.js"></script>
+		<?php endif;?>
+		
 		<!-- Plugins End -->
 		<style>
 		
