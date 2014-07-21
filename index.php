@@ -204,7 +204,7 @@
 			ul.menu ul > li a {color:<?php echo $this->params->get('comp_color');?>;}
 			
 			<?php if($this->params->get('navigation_spacer')=="1"):?>
-				ul.menu > li > a:before{content: "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;";} 
+				ul.menu > li > a:before{content: "  |  ";} 
 			<?php endif;?>
 			
 			

@@ -373,7 +373,7 @@ ul.menu > li > ul > li:hover ul { opacity: 1; top: 36px; left: 300px; }
 
 /* Items with deeper subitems*/
 ul.menu > li.parent > a { font-weight:bold;}
-ul.menu > li.parent > a:after{content: "&nbsp;&nbsp;v";}
+ul.menu > li.parent > a:after{content: "  v";}
 
 /* second and third level */
 ul.menu ul > li { display: block; display-display: block; display-padding: 10px 15px;}
