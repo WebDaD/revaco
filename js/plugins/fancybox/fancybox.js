@@ -4,7 +4,7 @@
 $( document ).ready(function() {
 	
 	if(fancybox.all_images=="1"){
-		$("img").each(function(){
+		$("img:not(.no_fancybox)").each(function(){//ignore no_fancybox)
 			$(this).addClass("fancybox");
 		});
 	}

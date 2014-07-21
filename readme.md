@@ -58,6 +58,12 @@ You may use as many images as you like
 You can also set the transition time for a single rotator:
 - ``<p class="simpleimagerotator" data-transition_time="VALUE">`` Wheres VALUE = Time in milliseconds
 
+#### FancyBox
+This Plugin shows pretty full-screen-images onClick
+It allows to auto-activate fancybox for every image, but wil ignore the class ``no_fancybox``
+For activation on a single image simply add the class ``fancybox``
+Info: The img alt-Tag will be Used as Title for the FullScreen Image
+
 ## MileStones
 
 See Issues
