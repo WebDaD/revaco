@@ -4,16 +4,20 @@
 
 $( document ).ready(function() {
 	
-	$("img").each(function() {  
+	$(".simpleimagerotator img"){ //Ignore this container
+		$(this).addClass("no_lazyload");
+	}
+	
+	$("img:not(.no_lazyload)").each(function() {  
 		var imgsrc = $(this).attr("src");
 		$(this).attr("data-src",imgsrc);
 		$(this).attr("src", "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
 	});  
 	
 	if(lazyload.threshold == 0){
-		$("img").unveil();
+		$("img:not(.no_lazyload)").unveil();
 	} else {
-		$("img").unveil(lazyload.threshold+"px");
+		$("img:not(.no_lazyload)").unveil(lazyload.threshold+"px");
 	}
 	
 });

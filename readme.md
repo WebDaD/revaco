@@ -38,11 +38,25 @@ Just add the following class to get an effect: (``<a class="[CLASS/ES]" href="">
 
 ### Plugins
 
+#### LazyLoad
+This plugin defers the loading of images until they come into the viewspace.
+It can be disabled per Image with the following class:
+- ``no_lazyload``
+Also all images in the following containers are ignored:
+- ``simpleimagerotator``
+
 #### YouTube
 This Plugin converts a youtube-URL to a embedded Video.
 You can write:
 - ``<p class="youtube">URL</p>`` to use the default Values defined.
 - ``<p class="youtube">url=https://www.youtube.com/watch?v=k4CDEhUE8YA;width=WWW;height=HHH</p>`` to overwrite the default Values for this Video
+
+#### SimpleImageRotator
+This Plugin shows different images in a single spot. Just write:
+- ``<p class="simpleimagerotator"><img src=""/><img src=""/>...</p>``
+You may use as many images as you like
+You can also set the transition time for a single rotator:
+- ``<p class="simpleimagerotator" data-transition_time="VALUE">`` Wheres VALUE = Time in milliseconds
 
 ## MileStones
 

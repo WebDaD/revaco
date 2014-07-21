@@ -299,6 +299,22 @@
 					label="TPL_REVACO_YOUTUBE_HEIGHT_LABEL"
 					description="TPL_REVACO_YOUTUBE_HEIGHT_DESC"
 					filter="string" />
+					
+			<field type="spacer" name="myspacer764" hr="true" />	
+					<field name="simpleimagerotator"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_SIMPLEIMAGEROTATOR_LABEL"
+					description="TPL_REVACO_SIMPLEIMAGEROTATOR_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			<field name="simpleimagerotator_transition_time"  type="text" default="6000" required="true"
+					label="TPL_REVACO_SIMPLEIMAGEROTATOR_TRANSITION_TIME_LABEL"
+					description="TPL_REVACO_SIMPLEIMAGEROTATOR_TRANSITION_TIME_DESC"
+					filter="string" />
 			</fieldset>
 			<fieldset name="icons">
 				<field name="favicon" class="" type="media" default=""

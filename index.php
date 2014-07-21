@@ -136,6 +136,15 @@
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/youtube/youtube.js"></script>
 		<?php endif;?>
 		
+		<?php if($this->params->get('simpleimagerotator')=="1"):?>
+			<script>
+				var simpleimagerotator = {
+						transition_time:<?php echo $this->params->get('simpleimagerotator_transition_time');?>
+				};
+			</script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/imagerotator/simple.js"></script>
+		<?php endif;?>
+		
 		<!-- Plugins End -->
 		<style>
 		
