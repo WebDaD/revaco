@@ -205,6 +205,7 @@
 			
 			<?php if($this->params->get('navigation_spacer')=="1"):?>
 				ul.menu > li > a:before{content: "  |  ";} 
+				ul.menu > li:first-child > a:before{content: "";}
 			<?php endif;?>
 			
 			
