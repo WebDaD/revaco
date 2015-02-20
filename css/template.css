@@ -354,8 +354,8 @@ table.weblinks th, table.category th {
 
 #headline{float:left;font-size:36pt;height:114px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:114px;vertical-align:middle;}
 
-#headline_desc{float:left;font-size:24pt;height:73px;margin-bottom:6px;margin-top:0px;margin-left:2%;line-height:73px;vertical-align:middle;}
-#headdesc{float:left;font-size:12pt;height:35px;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:35px;vertical-align:middle;}
+#headline_desc{float:left;margin-bottom:6px;margin-left:2%;line-height:73px;vertical-align:middle;width:calc(98%-114px);height:57px;margin-top:15px;font-size:42pt}
+#headdesc{float:left;margin-bottom:0px;margin-top:0px;margin-left:2%;line-height:35px;vertical-align:middle;height:38px; font-size:16pt;font-weight:bold;}
 
 /*NAVIGATION*/
 #navigation{clear:both;margin-bottom:2%;}
@@ -387,8 +387,11 @@ ul.menu li.parent.deeper  ul  li.parent.deeper  ul {border-style:solid;border-wi
 .navbutton_active{margin-left:-10px;margin-right:10px; -webkit-transition: margin 300ms ease-in-out;-moz-transition: margin 300ms ease-in-out;transition: margin 300ms ease-in-out;	}
 
 
-#content{clear:both;}
+#content{clear:both;padding-left:2%;padding-right:2%;}
 
+
+/*UL fix */
+#content * ul{list-style-type:disc;}
 
 /*FOOTER*/
 #footer{border-top-width:4px;border-top-style:solid;margin-top:2%;}
@@ -425,10 +428,14 @@ transition: all 250ms ease-in-out;}/*TODO: Text shadow*/
 	/*OVERWRITING FOR MOBILE*/
 	
 /*content elements for mobile*/
-div.person {width:100%;}
-div.nav_link{width:100%;}	
-p.block{width:100%;}	
-img.block{width:100%;}	
+div.person {width:100%;padding-left: 5%;padding-right: 5%;}
+div.nav_link{width:100%;padding-left: 5%;padding-right: 5%;}	
+p.block{width:100%;padding-left: 5%;padding-right: 5%;}	
+img.block{width:100%;padding-left: 5%;padding-right: 5%;}	
+h3.block {width:100%;padding-left: 5%;padding-right: 5%;}
+table.block {width:100%;padding-left: 5%;padding-right: 5%;}
+p.divider {width:100%;padding-left: 5%;padding-right: 5%;}
+h3.divider {width:100%;padding-left: 5%;padding-right: 5%;}
 
 #container{width:100%;}
 

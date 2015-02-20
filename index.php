@@ -30,7 +30,7 @@
 
 		<title><?php echo htmlspecialchars($document->getTitle(), ENT_COMPAT, 'UTF-8');?></title>
    		
-   		
+   		<meta name="theme-color" content="<?php echo $this->params->get('main_color');?>">
    		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
