@@ -6,6 +6,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
    <head>
+   
+   
+		
+		
    		<meta charset="<?php echo $document->getCharset();?>" />
 		<base href="<?php echo $document->getBase();?>" />
 		
@@ -30,7 +34,7 @@
 
 		<title><?php echo htmlspecialchars($document->getTitle(), ENT_COMPAT, 'UTF-8');?></title>
    		
-   		<meta name="theme-color" content="<?php echo $this->params->get('main_color');?>">
+   		
    		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -102,7 +106,7 @@
 		
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
-		
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 		
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-1.11.0.min.js" type="text/javascript" ></script>
@@ -274,7 +278,10 @@
 				}
 			</style>
 		<?php endif;?>
+		
+		<jdoc:include type="head" />
 	</head>
+	
 	<body>
 		<div id="container">
 			<div id="header_mobile" class="mobile">
