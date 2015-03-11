@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-body{margin:0;padding:0;}
+body{margin:0;padding:0; font-family:helvetica;}
 #container{width:90%;margin: 0 auto;}
 
 /*BASIC STYLING (articels, links, etc)*/

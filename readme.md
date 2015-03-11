@@ -36,6 +36,38 @@ Just add the following class to get an effect: (``<a class="[CLASS/ES]" href="">
 - `.italic`: have italic font
 - `.smooth`: Let all the above magic happen in a smooth movement
 
+### Tables
+
+You may use class `def` to have a default class.  
+`highlight` will enable highlighting of rows and cols.  
+
+_Example:_  
+ `<table class="highlight def">  
+    <thead>  
+        <tr>  
+            <th>col1</th>  
+            <th>col2</th>  
+            <th class="col">col3</th>  
+            <th class="col">col4</th>  
+            <th class="col">col5</th>  
+        </tr>  
+    </thead>    
+    <tbody>  
+        <tr>  
+            <th class="row">300</th>  
+            <th>300</th>  
+            <td>1449,-</td>  
+            <td></td>  
+            <td></td>  
+        </tr>  
+        <tr>  
+            <th class="row">300</th>  
+            <th>400</th>  
+            <td>1599,-</td>  
+            <td></td>  
+            <td></td>  
+        </tr>`  
+
 ### Plugins
 
 #### LazyLoad
