@@ -29,6 +29,97 @@ a{text-decoration:none}
 a:hover{}
 
 
+
+table.def {
+    border: 1px solid black;
+  border-left:0;
+  border-top:0;
+    border-collapse:collapse;
+}
+table.def tr {
+    border: 1px solid black;
+  border-left:0;
+}
+table.def tr th, table.def tr td {
+    border: 1px solid black;
+    padding:12px;
+    text-align:center;
+}
+table.def thead tr{
+  border-top:0;
+  border-bottom:3px solid black;
+}
+table.def thead tr th{
+  border-top:0;
+}
+table.def tr th:first-child{
+  border-left:0;
+}
+table.def tr th:nth-child(2){
+  border-right:3px solid black;
+}
+table.def tbody tr th{
+  font-weight:normal;
+}
+
+
+/*plugin*/
+table.highlight {
+  overflow: hidden;
+}
+
+table.highlight * td, th {
+  position: relative;
+  outline: 0;
+}
+
+body:not(.nohover) * table.highlight * tbody tr:hover {
+  background-color: #FFFF99;
+}
+
+table.highlight * td:hover{
+  cursor:pointer;
+  font-weight:bold;
+  color:red;
+}
+table.highlight * td:hover::after,
+table.highlight * thead th:not(:empty):hover::after,
+table.highlight * td:focus::after,
+table.highlight * thead th:not(:empty):focus::after { 
+  content: '';  
+  height: 10000px;
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+table.highlight * td:hover::after,
+table.highlight * th:hover::after {
+  background-color: #FFFF99;
+}
+
+table.highlight * td:focus::after,
+table.highlight * th:focus::after {
+  background-color: lightblue;
+}
+
+/* Focus stuff for mobile */
+table.highlight * td:focus::before,
+table.highlight * tbody th:focus::before {
+  background-color: lightblue;
+  content: '';  
+  height: 100%;
+  top: 0;
+  left: -5000px;
+  position: absolute;  
+  width: 10000px;
+  z-index: -1;
+}
+
+
+
 /*Content*/
 /*
 Main News
