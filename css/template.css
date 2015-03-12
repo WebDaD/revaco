@@ -168,10 +168,10 @@ div.intro p{width:49%;float:left;margin-left:2px;}
 
 /*
 Hide edit buttons, we dont want them here
-*/
+
 * div.btn-group{display:none;}
 * div.addattach{display:none;}
-
+*/
 /*END BASIC STYLING*/
 
 /*JOOMLA Elements*/
