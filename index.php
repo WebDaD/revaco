@@ -142,7 +142,7 @@
 		
 		<?php if($this->params->get('simpleimagerotator')=="1"):?>
 			<script>
-				var simpleimagerotator = {
+				var contentrotator = {
 						transition_time:<?php echo $this->params->get('simpleimagerotator_transition_time');?>
 				};
 			</script>
@@ -200,7 +200,15 @@
 			#headline_desc{color:<?php echo $this->params->get('main_color');?>;}
 			#headdesc{color:<?php echo $this->params->get('assisting_color');?>;}
 			
-			
+			/*row highlighting*/
+			table.rowhigh * tr.rh:hover{
+  				background:<?php echo $this->params->get('assisting_color');?>;
+  				cursor: default;
+			}
+			table.rowhigh * tr.rh:hover td{
+				font-weight: bold;
+			}
+
 			ul.menu { background-color: <?php echo $this->params->get('main_color');?>;color:<?php echo $this->params->get('comp_color');?>;}
 			ul.menu > li > a {color:<?php echo $this->params->get('comp_color');?>;}
 			ul.menu > li > a:hover, ul.menu > li:hover > a { background: <?php echo $this->params->get('comp_color');?>; color:<?php echo $this->params->get('main_color');?>;}
