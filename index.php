@@ -1,7 +1,6 @@
 <?php defined( '_JEXEC' ) or die( 'Restricted access' );?>
 <?php $params = JFactory::getApplication()->getTemplate(true)->params;?>
 <?php $document = JFactory::getDocument();?>
-<?php $menuicon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAUCAYAAABWMrcvAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gUcBi0a7wpvjwAAAEFJREFUOMvdk8ENwEAMwuCUAdr9Z7mOFncG8gx/S2AJA4/CuLtJobKtGAJySNKrXTFwJ1Cs70zqFfAtVL7tGqNNP6gyIr0pqNSJAAAAAElFTkSuQmCC";?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
    xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
@@ -245,7 +244,7 @@
 			@media only screen and (max-width: 800px) {
 			
 				#header_mobile{background-color:<?php echo $this->params->get('main_color');?>;color: <?php echo $this->params->get('comp_color');?>;}
-				#menuToggler{color:<?php echo $this->params->get('comp_color');?>;}
+				#menuToggler{color:<?php echo $this->params->get('comp_color');?>;border-color:<?php echo $this->params->get('comp_color');?>;}
 				#headline{color:<?php echo $this->params->get('comp_color');?>;}
 				
 			
@@ -292,12 +291,10 @@
 	
 	<body>
 		<div id="container">
-			<div id="header_mobile" class="mobile">
-			 <a href="#" id="menuToggler">
-		    	<img class="icon icon-menu no_fancybox" src="<?php echo $menuicon;?>"/>
-		    </a>
+			<div id="header_mobile" class="mobile"> 
 				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>" class="no_fancybox"/>
 				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				<a href="#" id="menuToggler"><img class="icon icon-menu no_fancybox" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/icon-menu.png"/></a>
 			</div>
 			<?php if($this->params->get('header_module')=="1"):?>
 				<div id="header_desktop" class="desktop">

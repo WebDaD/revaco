@@ -528,8 +528,8 @@ img{max-width:300px;height:auto;}
 
 /*HEADER*/
 #header_mobile{height:48px;}
-#menuToggler{float:left;font-size:20pt;}
-#menuToggler .icon { display: inline-block; vertical-align: middle; padding-right: 5px; }
+#menuToggler{float:right;margin-right:10px;height:48px;}
+#menuToggler .icon { display: inline-block; vertical-align: middle; padding-right: 5px; height:40px;padding-top:4px;padding-bottom:4px; }
 #menuToggler span { display: inline-block; vertical-align: middle; font-weight: 800; font-size: 24px; line-height: 48px; }
 #menuToggler a:hover { text-decoration: none; }
 	
