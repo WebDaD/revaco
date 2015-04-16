@@ -295,17 +295,23 @@
 		<div id="container">
 			<div id="header_mobile" class="mobile"> 
 				<img id="logo_white" src="<?php echo JUri::root() . $this->params->get('logo-white');?>" class="no_fancybox"/>
-				<p id="headline"><?php echo $this->params->get('sitetitle');?></p>
+				<p id="headline">
+					<?php if($this->params->get('custom_mobile_title')=="1"):?>
+						<?php echo $this->params->get('sitetitle');?>
+					<?php else:?>
+						<?php echo $this->params->get('mobile_title');?>
+					<?php endif;?>
+				</p>
 				<a href="#" id="menuToggler"><img class="icon icon-menu no_fancybox" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/img/icon-menu.png"/></a>
 			</div>
 			<?php if($this->params->get('header_module')=="1"):?>
 				<div id="header_desktop" class="desktop">
-					<jdoc:include type="modules" name="header" style="none" />
+					<?php echo $this->params->get('header_module_html'); ?>
 				</div>
 			<?php else:?>
-				<?php if($this->params->get('preheader_module')=="1"):?>
+				<?php if($this->params->get('header_module')=="2"):?>
 					<div id="preheader" class="desktop">
-						<jdoc:include type="modules" name="preheader" style="none" />
+						<?php echo $this->params->get('preheader_module_html'); ?>
 					</div>
 				<?php endif;?>
 				<div id="header_desktop" class="desktop">
@@ -341,13 +347,15 @@
 			</div>
 			<?php if($this->params->get('footer_module')=="1"):?>
 				<div id="footer">
-					<jdoc:include type="modules" name="footer" style="none" />
+					<?php echo $this->params->get('footer_module_html'); ?>
 				</div>
 			<?php else:?>
 				<div id="footer">
-					<?php if($this->params->get('left_footer_module')=="1"):?>
+					<?php if($this->params->get('footer_module')=="2"):?>
 						<div id="footer_left">
-							<jdoc:include type="modules" name="footer_left" style="none" />
+							<div style="float:left;">
+								<?php echo $this->params->get('leftfooter_module_html'); ?>
+							</div>
 						</div>
 					<?php else:?>
 						<div id="footer_left">

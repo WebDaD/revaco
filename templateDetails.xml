@@ -7,7 +7,7 @@
         <authorUrl>http://www.webdad.eu</authorUrl>
         <copyright>WebDaD 2014</copyright>
         <license>GNU/GPL</license>
-        <version>1.45</version>
+        <version>1.50</version>
         <description>TPL_REVACO_XML_DESCRIPTION</description>
         <files>
                 <filename>index.php</filename>
@@ -30,10 +30,6 @@
                 <position>news</position>
                 <position>search</position>
                 <position>flags</position>
-                <position>header</position>
-                <position>preheader</position>
-                <position>footer</position>
-                <position>footer_left</position>
         </positions>
         <languages folder="language">
             <language tag="de-DE">de-DE/de-DE.tpl_revaco.ini</language>
@@ -63,8 +59,25 @@
 			    <field name="sitedescription"  type="text" default=""
 					label="JGLOBAL_DESCRIPTION"
 					description="JGLOBAL_SUBHEADING_DESC"
+					showon="show_site_description:1"
 					filter="string" />
-
+				
+				<field name="custom_mobile_title"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_REVACO_CUSTOM_MOBILE_LABEL"
+					description="TPL_REVACO_CUSTOM_MOBILE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="mobile_title"  type="text" default=""
+					label="TPL_REVACO_MOBILE_TITLE_LABEL"
+					description="TPL_REVACO_MOBILE_TITLE_DESC"
+					showon="custom_mobile_title:1"
+					filter="string" />
+					
 				<field name="impressum_link" class="" type="url" default="" required="true"
 					label="TPL_REVACO_IMPRESSUM_LINK_LABEL"
 					description="TPL_REVACO_IMPRESSUM_LINK_DESC" />
@@ -97,32 +110,45 @@
 			<fieldset name="header">
 				<field name="header_module"
 					type="radio"
-					class="btn-group btn-group-yesno"
+					class="btn-group"
 					default="0"
 					label="TPL_REVACO_HEADER_MODULE_LABEL"
 					description="TPL_REVACO_HEADER_MODULE_DESC"
 				>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
+					
+					<option value="0">Default Header</option>
+					<option value="1">Custom Header</option>
+					<option value="2">Default Header with Preheader Module</option>
 				</field>	
-				<field name="preheader_module"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="0"
-					label="TPL_REVACO_PREHEADER_MODULE_LABEL"
-					description="TPL_REVACO_PREHEADER_MODULE_DESC"
-				>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>	
+				<field name="header_module_html" 
+					type="editor" 
+					filter="safehtml"
+					buttons="true" 
+					hide="readmore,pagebreak"
+					showon="header_module:1"
+					label="TPL_REVACO_HEADER_MODULE_HTML_LABEL"
+					description="TPL_REVACO_HEADER_MODULE_HTML_DESC"
+					 />
+				
+				<field name="preheader_module_html" 
+					type="editor" 
+					filter="safehtml"
+					buttons="true" 
+					hide="readmore,pagebreak"
+					showon="header_module:2"
+					label="TPL_REVACO_PREHEADER_MODULE_HTML_LABEL"
+					description="TPL_REVACO_PREHEADER_MODULE_HTML_DESC"
+					 />
+				
 				<field name="header_backcolor" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_HEADER_BACKCOLOR_LABEL"
 					description="TPL_REVACO_HEADER_BACKCOLOR_DESC" />
-				<field type="spacer" name="W0" hr="true" />	
+				<field type="spacer" name="W0" hr="true"/>	
 				<field name="header_second_image_show"
 					type="radio"
 					class="btn-group btn-group-yesno"
 					default="0"
+					showon="header_module:0"
 					label="TPL_REVACO_HEADER_SECOND_SHOW_LABEL"
 					description="TPL_REVACO_HEADER_SECOND_SHOW_DESC"
 				>
@@ -131,13 +157,16 @@
 				</field>	
 				<field name="header_second_image" class="" type="media" default=""
 					label="TPL_REVACO_LOGO_HEADER_SECOND_LABEL"
+					showon="header_module:0"
 					description="TPL_REVACO_LOGO_HEADER_SECOND_DESC" />
 					
 				<field name="header_second_image_alt"  type="text" default=""
 					label="TPL_REVACO_LOGO_HEADER_SECOND_ALT_LABEL"
+					showon="header_module:0"
 					description="TPL_REVACO_LOGO_HEADER_SECOND_ALT_DESC"
 					filter="string" />
 				<field name="header_logo_ratio" type="list" default="1"
+				showon="header_module:0"
 					label="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_LABEL"
 					description="TPL_REVACO_LOGO_HEADER_LOGO_RATIO_DESC">
 						<option value="1">1 : 1</option>
@@ -147,6 +176,7 @@
 				</field>
 				<field name="header_googlefont"
 					type="radio"
+					
 					class="btn-group btn-group-yesno"
 					default="0"
 					label="TPL_REVACO_HEADER_GOOGLEFONT_LABEL"
@@ -158,7 +188,10 @@
 				<field name="header_googlefont_name"  type="text" default="Open+Sans"
 					label="TPL_REVACO_HEADER_GOOGLEFONT_NAME_LABEL"
 					description="TPL_REVACO_HEADER_GOOGLEFONT_NAME_DESC"
+					showon="header_googlefont:1"
 					filter="string" />
+					
+					
 				<field name="header_webdadfont"
 					type="radio"
 					class="btn-group btn-group-yesno"
@@ -172,6 +205,7 @@
 				<field name="header_webdadfont_name"  type="text" default="alexbrush"
 					label="TPL_REVACO_HEADER_WEBDADFONT_NAME_LABEL"
 					description="TPL_REVACO_HEADER_WEBDADFONT_NAME_DESC"
+					showon="header_webdadfont:1"
 					filter="string" />
 				
 			</fieldset>
@@ -192,24 +226,33 @@
 			<fieldset name="footer">
 				<field name="footer_module"
 					type="radio"
-					class="btn-group btn-group-yesno"
+					class="btn-group "
 					default="0"
 					label="TPL_REVACO_FOOTER_MODULE_LABEL"
 					description="TPL_REVACO_FOOTER_MODULE_DESC"
 				>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
+					<option value="0">Default Footer</option>
+					<option value="1">Custom Footer</option>
+					<option value="2">Default Footer with custom left side</option>
 				</field>
-				<field name="left_footer_module"
-					type="radio"
-					class="btn-group btn-group-yesno"
-					default="0"
-					label="TPL_REVACO_LEFT_FOOTER_MODULE_LABEL"
-					description="TPL_REVACO_LEFT_FOOTER_MODULE_DESC"
-				>
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+				<field name="footer_module_html" 
+					type="editor" 
+					filter="safehtml"
+					buttons="true" 
+					hide="readmore,pagebreak"
+					showon="footer_module:1"
+					label="TPL_REVACO_FOOTER_MODULE_HTML_LABEL"
+					description="TPL_REVACO_FOOTER_MODULE_HTML_DESC"
+					 />
+				<field name="leftfooter_module_html" 
+					type="editor" 
+					filter="safehtml"
+					buttons="true" 
+					hide="readmore,pagebreak"
+					showon="footer_module:2"
+					label="TPL_REVACO_LEFTFOOTER_MODULE_HTML_LABEL"
+					description="TPL_REVACO_LEFTFOOTER_MODULE_HTML_DESC"
+					 />
 				<field name="footer_color" class="" type="color" default="#FFFFFF"
 					label="TPL_REVACO_FOOTER_COLOR_LABEL"
 					description="TPL_REVACO_FOOTER_COLOR_DESC" />	
