@@ -171,7 +171,7 @@
 		
 			body{background:<?php echo $this->params->get('back_color');?>;}
 		
-			#container{background:#FFFFFF;}
+			#container{background:#FFFFFF;width:<?php echo $this->params->get('container_width');?>;}
 			
 			
 			
@@ -242,6 +242,8 @@
 			
 			/*MOBILE OVERWRITES*/
 			@media only screen and (max-width: 800px) {
+			
+				#container{width:100%;}
 			
 				#header_mobile{background-color:<?php echo $this->params->get('main_color');?>;color: <?php echo $this->params->get('comp_color');?>;}
 				#menuToggler{color:<?php echo $this->params->get('comp_color');?>;border-color:<?php echo $this->params->get('comp_color');?>;}

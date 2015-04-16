@@ -216,6 +216,12 @@
 			</fieldset>
 			
 			<fieldset name="content">
+				
+				<field name="container_width"  type="text" default="80%"
+					label="TPL_REVACO_CONTAINER_WIDTH_LABEL"
+					description="TPL_REVACO_CONTAINER_WIDTH_LABEL"
+					filter="string" />
+					
 				<field name="content_border_left"
 					type="radio"
 					class="btn-group btn-group-yesno"
