@@ -139,13 +139,13 @@
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/youtube/youtube.js"></script>
 		<?php endif;?>
 		
-		<?php if($this->params->get('simpleimagerotator')=="1"):?>
+		<?php if($this->params->get('contentrotator')=="1"):?>
 			<script>
 				var contentrotator = {
-						transition_time:<?php echo $this->params->get('simpleimagerotator_transition_time');?>
+						transition_time:<?php echo $this->params->get('contentrotator_transition_time');?>
 				};
 			</script>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/imagerotator/simple.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/plugins/contentrotator/simple.js"></script>
 		<?php endif;?>
 		
 		<?php if($this->params->get('fancybox')=="1"):?>
