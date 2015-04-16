@@ -326,6 +326,7 @@
 			<field name="lazyload_threshold"  type="text" default="0" required="true"
 					label="TPL_REVACO_LAZYLOAD_THRESHOLD_LABEL"
 					description="TPL_REVACO_LAZYLOAD_THRESHOLD_DESC"
+					showon="lazyload:1"
 					filter="string" />
 					
 			<field type="spacer" name="myspacer10" hr="true" />	
@@ -343,10 +344,12 @@
 			<field name="youtube_width"  type="text" default="560" required="true"
 					label="TPL_REVACO_YOUTUBE_WIDTH_LABEL"
 					description="TPL_REVACO_YOUTUBE_WIDTH_DESC"
+					showon="youtube:1"
 					filter="string" />
 			<field name="youtube_height"  type="text" default="315" required="true"
 					label="TPL_REVACO_YOUTUBE_HEIGHT_LABEL"
 					description="TPL_REVACO_YOUTUBE_HEIGHT_DESC"
+					showon="youtube:1"
 					filter="string" />
 					
 			<field type="spacer" name="myspacer764" hr="true" />	
@@ -363,6 +366,7 @@
 			<field name="contentrotator_transition_time"  type="text" default="6000" required="true"
 					label="TPL_REVACO_CONTENTROTATOR_TRANSITION_TIME_LABEL"
 					description="TPL_REVACO_CONTENTROTATOR_TRANSITION_TIME_DESC"
+					showon="contentrotator:1"
 					filter="string" />
 					
 			<field type="spacer" name="myspacer765" hr="true" />	
@@ -376,10 +380,11 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-									<field name="fancybox_all_images"
+				<field name="fancybox_all_images"
 					type="radio"
 					class="btn-group btn-group-yesno"
 					default="0"
+					showon="fancybox:1"
 					label="TPL_REVACO_FANCYBOX_ALL_IMAGES_LABEL"
 					description="TPL_REVACO_FANCYBOX_ALL_IMAGES_DESC"
 				>
@@ -487,7 +492,9 @@
 				</field>
 				<field name="facebook_link" class="" type="url" default=""
 					label="TPL_REVACO_FACEBOOK_LINK_LABEL"
-					description="TPL_REVACO_FACEBOOK_LINK_DESC" />
+					description="TPL_REVACO_FACEBOOK_LINK_DESC"
+					showon="facebook:1"
+				 />
 				<field type="spacer" name="myspacer2" hr="true" />	
 				<field name="googleplus"
 					type="radio"
@@ -501,7 +508,9 @@
 				</field>
 				<field name="googleplus_link" class="" type="url" default=""
 					label="TPL_REVACO_GOOGLEPLUS_LINK_LABEL"
-					description="TPL_REVACO_GOOGLEPLUS_LINK_DESC" />
+					description="TPL_REVACO_GOOGLEPLUS_LINK_DESC"
+					showon="googleplus:1"
+					 />
 				<field type="spacer" name="myspacer3" hr="true" />	
 				<field name="twitter"
 					type="radio"
@@ -515,7 +524,9 @@
 				</field>
 				<field name="twitter_link" class="" type="url" default=""
 					label="TPL_REVACO_TWITTER_LINK_LABEL"
-					description="TPL_REVACO_TWITTER_LINK_DESC" />
+					description="TPL_REVACO_TWITTER_LINK_DESC" 
+					showon="twitter:1"
+					/>
 				<field type="spacer" name="myspacer4" hr="true" />	
 				<field name="rss"
 					type="radio"
@@ -529,7 +540,9 @@
 				</field>
 				<field name="rss_link" class="" type="url" default=""
 					label="TPL_REVACO_RSS_LINK_LABEL"
-					description="TPL_REVACO_RSS_LINK_DESC" />
+					description="TPL_REVACO_RSS_LINK_DESC" 
+					showon="rss:1"
+					/>
 				<field type="spacer" name="myspacer5" hr="true" />	
 				<field name="podcast"
 					type="radio"
@@ -543,7 +556,9 @@
 				</field>
 				<field name="podcast_link" class="" type="url" default=""
 					label="TPL_REVACO_PODCAST_LINK_LABEL"
-					description="TPL_REVACO_PODCAST_LINK_DESC" />
+					description="TPL_REVACO_PODCAST_LINK_DESC" 
+					showon="podcast:1"
+					/>
 				<field type="spacer" name="myspacer6" hr="true" />	
 				<field name="youtube"
 					type="radio"
@@ -557,7 +572,9 @@
 				</field>
 				<field name="youtube_link" class="" type="url" default=""
 					label="TPL_REVACO_YOUTUBE_LINK_LABEL"
-					description="TPL_REVACO_YOUTUBE_LINK_DESC" />
+					description="TPL_REVACO_YOUTUBE_LINK_DESC" 
+					showon="youtube:1"
+					/>
 				<field type="spacer" name="myspacer7" hr="true" />	
 				<field name="foursquare"
 					type="radio"
@@ -571,7 +588,9 @@
 				</field>
 				<field name="foursquare_link" class="" type="url" default=""
 					label="TPL_REVACO_FOURSQUARE_LINK_LABEL"
-					description="TPL_REVACO_FOURSQUARE_LINK_DESC" />
+					description="TPL_REVACO_FOURSQUARE_LINK_DESC" 
+					showon="foursquare:1"
+					/>
 				<field type="spacer" name="myspacer8" hr="true" />		
 			</fieldset>
 			<fieldset name="analytics">
@@ -587,13 +606,19 @@
 				</field>
 				<field name="clickheat_server" class="" type="url" default=""
 					label="TPL_REVACO_CLICKHEAT_SERVER_LABEL"
-					description="TPL_REVACO_CLICKHEAT_SERVER_DESC" />
+					description="TPL_REVACO_CLICKHEAT_SERVER_DESC"
+					showon="clickheat:1"
+					 />
 				<field name="clickheat_site" class="" type="text" default=""
 					label="TPL_REVACO_CLICKHEAT_SITE_LABEL"
-					description="TPL_REVACO_CLICKHEAT_SITE_DESC" />
+					description="TPL_REVACO_CLICKHEAT_SITE_DESC"
+					showon="clickheat:1"
+					 />
 				<field name="clickheat_group" class="" type="text" default=""
 					label="TPL_REVACO_CLICKHEAT_GROUP_LABEL"
-					description="TPL_REVACO_CLICKHEAT_GROUP_DESC" />
+					description="TPL_REVACO_CLICKHEAT_GROUP_DESC"
+					showon="clickheat:1"
+					 />
 				<field type="spacer" name="myspacer9" hr="true" />		
 				<field name="analytics"
 					type="radio"
@@ -607,10 +632,14 @@
 				</field>
 				<field name="analytics_id" class="" type="text" default=""
 					label="TPL_REVACO_ANALYTICS_ID_LABEL"
-					description="TPL_REVACO_ANALYTICS_ID_DESC" />
+					description="TPL_REVACO_ANALYTICS_ID_DESC"
+					showon="analytics:1"
+					 />
 				<field name="analytics_property" class="" type="text" default=""
 					label="TPL_REVACO_ANALYTICS_PROPERTY_LABEL"
-					description="TPL_REVACO_ANALYTICS_PROPERTY_DESC" />
+					description="TPL_REVACO_ANALYTICS_PROPERTY_DESC"
+					showon="analytics:1"
+				 />
 			</fieldset>
 		</fields>
 	</config>
