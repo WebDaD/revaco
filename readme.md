@@ -90,7 +90,7 @@ You can also set the transition time for a single rotator:
 #### FancyBox
 This Plugin shows pretty full-screen-images onClick
 It allows to auto-activate fancybox for every image, but wil ignore the class ``no_fancybox``
-For activation on a single image simply add the class ``fancybox``
+For activation on a single image simply add the class ``fancybox`` to a sorrounding Link, targeting the image!
 Info: The img alt-Tag will be Used as Title for the FullScreen Image
 
 ## MileStones
